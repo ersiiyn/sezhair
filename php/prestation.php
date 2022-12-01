@@ -8,9 +8,7 @@
     $reqC->execute();
     $dataC = $reqC -> fetch();
 ?>
-<div class="box-image">
-    <img src="<?php echo $dataC['image_categorie'];?>" width="100%" height="100%">
-</div>
+
 <!-- ...........................................  Coiffure .................................................. -->
 <!-- titre -->
 <?php
