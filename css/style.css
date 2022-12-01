@@ -1,0 +1,1252 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+/* ........................................... Image ..................................................*/
+.box-image{
+    /* border: solid 5px red; */
+    margin-bottom: 5%;
+}
+
+.image-menu{
+    width: 100%;
+    height: auto;
+}
+/* ...........................................  INDEX ..................................................*/
+/* ...........................................  Navbar ..................................................*/
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: white;
+    box-shadow: 5px 10px 5px 3px rgba(115, 115, 115, 0.2);
+    opacity: 0.9;
+}
+
+.navbar a{
+    font-family: 'Comfortaa', cursive;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    font-size: 16px;
+    /* border: solid 5px black; */
+}
+
+.navbar li a:hover{
+    color: #BE9462;
+}
+
+.sezhair{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 4px 7px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sezhair:hover{
+    color: #444444;
+}
+
+.s, .c{
+    color: #BE9462;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 4px 7px 4px rgba(0, 0, 0, 0.2);
+}
+/* ...........................................  Footer ..................................................*/
+/* CONTACTER */
+.box-footer-contacter{
+    /* border: solid 3px red; */
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.box-suivre{
+    /* border: solid 3px blue; */
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-titre-suivre{
+    /* border: solid 3px red; */
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titre-suivre{
+    font-family: 'Comfortaa', cursive;
+    font-size: 32px;
+    color: white;
+    font-weight: 300;
+}
+
+.box-texte-suivre{
+    /* border: solid 3px red; */
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.texte-suivre{
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    color: rgb(149, 149, 149);
+    font-weight: 300;
+}
+
+.box-logo-suivre{
+    /* border: solid 3px red; */
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-suivre1{
+    /* border: solid 3px green; */
+    width: 10%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1%;
+}
+
+.fa-facebook-f{
+    color: gray;
+}
+
+.fa-facebook-f:hover{
+    color: white;
+}
+
+.logo-suivre2{
+    /* border: solid 3px green; */
+    width: 10%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-instagram{
+    color: gray;
+    font-size: 35px;
+}
+
+.fa-instagram:hover{
+    color: white;
+}
+
+.box-contacter{
+    /* border: solid 3px blue; */
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-titre-contacter{
+    /* border: solid 3px red; */
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-adresse-contacter{
+    /* border: solid 3px red; */
+    width: 100%;
+    height: 61%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+}
+
+/* COPYRIGHT */
+.text-foot{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 19px;
+}
+/* ........................................... ACCUEIL ..................................................*/
+/* Retour en haut */
+#scroll_to_top{
+    /* border: solid 2px red; */
+    position: fixed;
+    bottom: 18px;
+    right: 28px;
+}
+
+#scroll_to_top img{
+    width: 30px;
+}
+/* Carousel */
+.carousel a{
+    color: white;
+}
+
+.carousel a:hover{
+    color: rgb(113, 113, 113);
+}
+
+/* Services */
+.box-service{
+    /* border: solid black 3px; */
+    width: 100%;
+    height: 70%;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-titre-services{
+    /* border: solid black 3px; */
+    width: 100%;
+}
+
+.box-toilletage{
+    /* border: solid red 3px; */
+    width: 100%;
+    text-align: center;
+}
+
+.toilletage{
+    color: #8D4C00;
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+}
+
+.box-services{
+    /* border: solid blue 3px; */
+    width: 100%;
+    height: 80%;
+    text-align: center;
+}
+
+.services{
+    font-family: 'Abhaya Libre', serif;
+    font-size: 64px;
+    text-shadow: 4px 7px 4px rgba(0, 0, 0, 0.2);
+}
+
+.box-logo-services{
+    /* border: solid blue 5px; */
+    margin-top: 3%;
+    width: 85%;
+    height: 75%;
+    display: flex;
+}
+
+.box-element1{
+    /* border: solid red 3px; */
+    width: 33.33%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0.5%;
+}
+
+.logo-services{
+    /* border: solid green 3px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.image-logo{
+    width: 20%;
+    height: 100%;
+}
+
+.titre-services{
+    /* border: solid green 3px; */
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.texte-titre-services{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 36px;
+}
+
+.texte-services{
+    /* border: solid green 3px; */
+    width: 85%;
+    height: auto;
+    text-align: center;
+}
+
+.texte-texte-services{
+    font-family: 'Rubik', sans-serif;
+    font-size: 22px;
+    color: #5D5D5D;
+}
+/* ........................................... SEZHAIR ..................................................*/
+.box-sezhair{
+    /* border: solid black 3px; */
+    width: 100%;
+    height: 75%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box-image-sezhair{
+    /* border: solid red 3px; */
+    width: 45%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.image-sezhair{
+    border-radius: 5px 5px 0px 0px;
+    filter: drop-shadow(1px 10px 20px rgba(0, 0, 0, 0.2));
+    width: 100%;
+    height: auto;
+}
+
+.box-ecriture-sezhair{
+    /* border: solid red 3px; */
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-titre-sezhair{
+    /* border: solid blue 3px; */
+    width: 100%;
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.titre-sezhair{
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    font-size: 44px;
+    filter: drop-shadow(8px 8px 4px rgb(207, 207, 207));
+}
+
+.box-texte-sezhair{
+    /* border: solid blue 3px; */
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.texte-sezhair{
+    font-family: 'Rubik', sans-serif;
+    font-size: 22px;
+}
+
+.box-button{
+    /* border: solid blue 3px; */
+    width: 100%;
+}
+/* ........................................... PRESENTATION..................................................*/
+.box-presentation{
+    /* border: solid black 3px; */
+    width: 100%;
+    /* height: 70vh; */
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grande-box-titre-presentation{
+    /* border: solid black 3px; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 25%;
+}
+
+.box-titre-equipe{
+    /* border: solid red 3px; */
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+
+.equipe{
+    color: #8D4C00;
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+}
+
+.box-titre-presentation{
+    /* border: solid red 3px; */
+    width: 100%;
+    height: 70%;
+    text-align: center;
+}
+
+.presentation{
+    font-family: 'Abhaya Libre', serif;
+    font-size: 64px;
+    text-shadow: 4px 7px 4px rgba(0, 0, 0, 0.2);
+}
+
+.grande-box-presentation{
+    /* border: solid orange 3px; */
+    width: 85%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3%;
+}
+
+.petite-box-presentation{
+    /* border: solid blue 5px; */
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.box-texte-presentation{
+    /* border: solid red 3px; */
+    width: 85%;
+    /* height: 25%; */
+    text-align: center;
+}
+
+.texte-presentation{
+    font-family: 'Rubik', sans-serif;
+    font-size: 22px;
+    color: #5D5D5D;
+}
+
+.box-image-presentation{
+    /* border: solid red 3px; */
+    width: 100%;
+    /* height: 33.33%; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.image-presentation{
+    border-radius: 100%;
+    width: 35%;
+}
+
+.box-nom-presentation{
+    /* border: solid red 3px; */
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.nom-presentation{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    color: #8D4C00;
+}
+/* ........................................... PRODUITS..................................................*/
+.box-produits{
+    /* border: solid black 3px; */
+    width: 100%;
+    height: 60%;
+    margin-top: 8%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.grande-box-texte-produits{
+    /* border: solid blue 3px; */
+    width: 45%;
+    height: 100%;
+}
+
+.box-ecriture-produits{
+    /* border: solid red 3px; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.box-titre-produits{
+    /* border: solid green 3px; */
+    text-align: right;
+    margin-bottom: 3%;
+}
+
+.box-texte-produits{
+    /* border: solid green 3px; */
+    margin-bottom: 5%;
+    text-align: right;
+    width: 85%;
+}
+
+.box-image-produits{
+    /* border: solid blue 3px; */
+    width: 40%;
+    height: auto;
+    display: flex;
+}
+
+.image-produits{
+    border-radius: 1%;
+    width: 100%;
+    height: auto;
+}
+/* ........................................... MESSAGE..................................................*/
+.box-message{
+    /* border: solid orange 3px; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/accueil/hero.jpg) ;
+    background-position:center;
+    background-size: cover;
+    width: 100%;
+    height: 55%;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-titre-message{
+    /* border: solid blue 3px; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.titre-message{
+    /* border: solid red 3px; */
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 12%;
+}
+
+.texte-message{
+    color: white;
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.box-bouton-message{
+    /* border: solid blue 3px; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 3%;
+    margin-bottom: 9%;
+}
+
+.bouton-message{
+    /* border: solid red 3px; */
+    width: 20%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bouton-message a{
+    font-family: 'Rubik', sans-serif;
+}
+/* ........................................... CONTACT ..................................................*/
+/* ........................................... IMAGE ..................................................*/
+/*ADRESSE HORAIRE */ 
+.box-adresse-contact{
+    /* border: solid black 3px; */
+    width: 100%;
+    height: 33vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+
+.box-numero-contact{
+    /* border: solid blue 3px; */
+    width: 100%;
+    /* height: 30%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numero-contact{
+    font-size: 36px;
+    font-family: 'Rubik', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.box-horaire-contact{
+    /* border: solid blue 3px; */
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.horaire-contact, .adresse-contact{
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+}
+
+.petite-box-adresse-contact{
+    /* border: solid blue 3px; */
+    width: 100%;
+    height: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ........................................... MAPS ..................................................*/
+.box-maps{
+    /* border: solid black 3px; */
+    background-color: #F4F4F4;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.box-image-maps{
+    /* border: solid blue 3px; */
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.maps{
+    /* border: solid blue 3px; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.brush{
+    width: 35%; 
+    height: 80%;
+}
+/* ........................................... FORMULAIRE MESSAGE ..................................................*/
+.formulaire{
+    margin-bottom: 8%;
+}
+
+.titre-formulaire{
+    font-family: 'Abhaya Libre', serif;
+    font-size: 32px;
+}
+
+.texte-form{
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+}
+
+textarea{
+    height: 150px;
+}
+/* ...........................................  MEDIAS ..................................................*/
+/* ........................................... photo ..................................................*/
+.box-photo{
+    /* border: solid black 3px; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 8%;
+    margin-top: 5%;
+}
+
+.photo{
+    /* border: solid blue 3px; */
+    margin-bottom: 5%;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coupe{
+    border-radius: 10px;
+    width: 65%;
+    height: 90%;
+}
+/* ........................................... PRESTATIONS ..................................................*/
+/* ........................................... Coiffure ..................................................*/
+/*Titre*/
+.box-titre{
+    /* border: solid black 3px; */
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+}
+
+.titre{
+    /* border: solid blue 3px; */
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.texte-coiffure{
+    /* border: solid black 1px; */
+    font-family: 'Abhaya Libre', serif;
+    font-size: 40px;
+    text-decoration: underline;
+    font-weight: 700;
+}
+/*Tarifs*/
+.box-tarifs{
+    /* border: solid black 3px; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+
+.box-tarifs-inverser{
+    /* border: solid black 3px; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+
+.box-formule{
+    /* border: solid blue 3px; */
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.formule{
+    /* border: solid red 3px; */
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.box-vert{
+    /* border: solid green 3px; */
+    display: flex;
+    margin-bottom: 15%;
+}
+
+.prix-formule{
+    /* border: solid yellow 3px; */
+    font-size: 28px;
+    font-family: 'Abhaya Libre', serif;
+}
+
+.texte-formule{
+    /* border: solid yellow 3px; */
+    font-size: 28px;
+    font-family: 'Abhaya Libre', serif;
+}
+
+.box-image-formule{
+    /* border: solid blue 3px; */
+    width: 38%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.image-formule{
+    width: 90%;
+    height: 90%;
+}
+/* ........................................... Connexion ..................................................*/
+.box-connexion{
+    /* border: solid black 3px; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 6%;
+    height: 66vh;
+}
+
+.image-connexion{
+    /* border: solid black 3px; */
+    width: 40%;
+    height: 100%;
+    display: flex;
+}
+
+.box-container{
+    /* border: solid black 3px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+}
+
+/* ........................................... RESPONSIVE ..................................................*/
+@media screen and (max-width : 1400px){
+    /* Prestations */
+    .texte-formule{
+        font-size: 21px;
+    }
+    .prix-formule{
+        font-size: 21px;
+    }
+    /* Accueil */
+    .titre-sezhair{
+        font-size: 35px;
+    }
+    .texte-sezhair{
+        font-size: 18px;
+    }
+    /* Message */
+    .bouton-message{
+        width: 23%;
+    }
+    /* Contact */
+    .brush{
+        width: 45%; 
+    }
+}
+@media screen and (max-width : 1160px){
+    /* Header */
+    .inst, .fb, .medias{
+        display: none;
+    }
+    .box-formule{
+        width: 45%;
+    }
+    /* Accueil */
+    .titre-sezhair{
+        font-size: 27px;
+    }
+    .texte-sezhair{
+        font-size: 15px;
+    }
+    /* Services */
+    .texte-titre-services{
+        font-size: 28px;
+    }
+    .texte-texte-services{
+        font-size: 18px;
+    }
+    .box-logo-services{
+        width: 95%;
+    }
+    /* Presentation */
+    .grande-box-presentation{
+        width: 95%;
+    }
+    .texte-presentation{
+        font-size: 18px;
+    }
+    .nom-presentation{
+        font-size: 28px;
+    }
+    /* Message */
+    .bouton-message{
+        width: 27%;
+    }
+    /* Contact */
+    .brush{
+        width: 50%; 
+    }
+}
+@media screen and (max-width : 992px){
+    /* Header */
+    .inst, .fb, .medias{
+        /* Faire apparaitre pour le menu deroulant */
+        display: block;
+    }
+}
+/* ........................................... Tablette ..................................................*/
+/* Paysage */
+@media screen and (max-width : 1024px){
+    /* Footer */
+    .titre-suivre{
+        font-size: 30px;
+    }
+    .texte-suivre{
+        font-size: 16px;
+    }
+    /* Contact */
+    .maps{
+        width: 50%;
+    }
+    .brush{
+        width: 58%; 
+    }
+    /* Prestations */
+    .texte-formule{
+        font-size: 18px;
+    }
+    .prix-formule{
+        font-size: 18px;
+    }
+    .texte-coiffure{
+        font-size: 30px;
+    }
+    /* SEZHAIR */
+    .box-image-sezhair{
+        align-items: center;
+    }
+    .image-sezhair{
+        width: 100%;
+        height: 80%;
+    }
+}
+/* Portrait */
+@media screen and (max-width : 900px){
+    /* Footer */
+    .titre-suivre{
+        font-size: 25px;
+    }
+    .texte-suivre{
+        font-size: 14px;
+    }
+    .fa-instagram{
+        font-size: 24px;
+    }
+    .fa-facebook-f{
+        font-size: 24px;
+    }
+    /* Contact */
+    .box-image-maps{
+        display: none;
+    }
+    .maps{
+        width: 100%;
+    }
+    /* Prestations */
+    .box-tarifs{
+        flex-direction: column-reverse;
+    } 
+    .box-tarifs-inverser{
+        flex-direction: column-reverse;
+    }
+    .texte-coiffure{
+        font-size: 35px;
+    }
+    .box-formule{
+        justify-content: center;
+        width: 100%;
+    }
+    .formule{
+        justify-content: center;
+        align-items: center;
+    }
+    .texte-formule{
+        font-size: 25px;
+    }
+    .prix-formule{
+        font-size: 25px;
+    }
+    .box-vert{
+        justify-content: center;
+    }
+    .box-image-formule{
+        width: 60%;
+        margin-bottom: 10%;
+    }
+    /* Medias */
+    .box-photo{
+        flex-direction: column;
+    }
+    .photo{
+        width: 100%;
+        margin-bottom: 12%;
+    }
+    .coupe{
+        width: 50%;
+        height: 90%;
+    }
+    /* Accueil */
+    /* Sezhair */
+    .box-sezhair{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20%;
+    }
+    .box-image-sezhair{
+        width: 95%;
+        margin-bottom: 10%;
+    }
+    .box-ecriture-sezhair{
+        width: 90%;
+        justify-content: center;
+    }
+    .box-titre-sezhair{
+        justify-content: center;
+    }
+    .box-texte-sezhair{
+        justify-content: center;
+    }
+    .titre-sezhair{
+        font-size: 42px;
+    }
+    .texte-sezhair{
+        text-align: center;
+        font-size: 20px;
+    }
+    .box-button{
+        text-align: center;
+    }
+    /* Services */
+    .box-titre-services{
+        margin-bottom: 6%;
+    }
+    .box-element1{
+        margin-bottom: 10%;
+    }
+    .box-logo-services{
+        width: 95%;
+        flex-direction: column;
+    }
+    .box-element1{
+        width: 100%;
+    }
+    .texte-titre-services{
+        font-size: 35px;
+    }
+    .texte-texte-services{
+        font-size: 22px;
+    }
+    .texte-services{
+        width: 55%;
+    }
+    .image-logo{
+        width: 10%;
+    }
+    /* Presentation */
+    .grande-box-presentation{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .grande-box-titre-presentation{
+        margin-bottom: 6%;
+    }
+    .petite-box-presentation{
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .box-texte-presentation{
+        width: 55%;
+    }
+    .texte-presentation{
+        font-size: 22px;
+    }
+    .nom-presentation{
+        font-size: 35px;
+    }
+    /* Produits */
+    .box-produits{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .box-image-produits{
+        width: 70%;
+        margin-bottom: 10%;
+    }
+    .grande-box-texte-produits{
+        width: 90%;
+    }
+    .box-ecriture-produits{
+        align-items: center;
+    }
+    .box-texte-produits{
+        width: 95%;
+    }
+    /* Message */
+    .bouton-message{
+        width: 34%;
+    }
+    .texte-message{
+        font-size: 25px;
+    }
+    /* Connexion */
+    .razor{
+        width: 65%;
+        height: 80%;
+    }
+}
+/* ........................................... Mobile ..................................................*/
+@media screen and (max-width : 720px){
+    /* Footer */
+    .box-suivre{
+        display: none;
+    }
+    .box-contacter{
+        width: 100%;
+    }
+    .titre-suivre{
+        font-size: 27px;
+    }
+    .texte-suivre{
+        font-size: 16px;
+    }
+    .text-foot{
+        font-size: 14px;
+    }
+    /* Contact */
+    .numero-contact{
+        font-size: 30px;
+    }
+    .horaire-contact{
+        font-size: 26px;
+    }
+    .adresse-contact{
+        font-size: 26px;
+    }
+    .box-maps{
+        height: 40vh;
+    }
+    /* Prestations */
+    .texte-formule{
+        font-size: 22px;
+    }
+    .prix-formule{
+        font-size: 22px;
+    }
+    .texte-coiffure{
+        font-size: 26px;
+    }
+    /* Sezhair */
+    .titre-sezhair{
+        font-size: 27px;
+    }
+    .texte-sezhair{
+        text-align: center;
+        font-size: 16px;
+    }
+    .toilletage{
+        font-size: 14px;
+    }
+    .services{
+        font-size: 50px;
+    }
+    .presentation{
+        font-size: 50px;
+    }
+    .equipe{
+        font-size: 14px;
+    }
+    /* Message */
+    .bouton-message{
+        width: 40%;
+    }
+    .bouton-message a{
+        font-size: 14px;
+    }
+    .titre-message{
+        width: 70%;
+    }
+    .texte-message{
+        font-size: 21px;
+    }
+    /* Services */
+    .logo-services{
+        width: 50%;
+    }
+    .texte-titre-services{
+        font-size: 27px;
+    }
+    .texte-texte-services{
+        font-size: 16px;
+    }
+    .image-logo{
+        width: 20%;
+    }
+    /* Connexion */
+    .image-connexion{
+        display: none;
+    }
+    .box-container{
+        width: 100%;
+    }
+}
+@media screen and (max-width : 480px){
+    .texte-coiffure{
+        font-size: 23px;
+    }
+    .texte-formule{
+        font-size: 19px;
+    }
+    .prix-formule{
+        font-size: 19px;
+    }
+    .texte-message{
+        font-size: 18px;
+    }
+    .bouton-message{
+        width: 35%;
+    }
+    .bouton-message a{
+        font-size: 11px;
+    }
+    /* Footer */
+    .titre-suivre{
+        font-size: 24px;
+    }
+    .texte-suivre{
+        font-size: 14px;
+    }
+    .text-foot{
+        font-size: 12px;
+    }
+}
