@@ -3,6 +3,19 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
+/* ...........................................  SCROLLBAR ..................................................*/
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #3a3a3a;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #3a3a3a;
+    border-radius: 20px;
+}
 /* ........................................... Image ..................................................*/
 .box-image{
     /* border: solid 5px red; */
@@ -725,11 +738,13 @@ textarea{
     justify-content: center;
     align-items: center;
     margin-bottom: 5%;
-    margin-top: 1%;
+    margin-top: 3%;
 }
 
 .titre{
     /* border: solid blue 3px; */
+    background-color: #B4975A;
+    padding: 2.5%;
     width: auto;
     height: auto;
     display: flex;
@@ -742,7 +757,6 @@ textarea{
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-size: 40px;
-    /* text-decoration: underline; */
     /* font-weight: 700; */
 }
 /*Tarifs*/

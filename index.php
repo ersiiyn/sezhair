@@ -42,7 +42,7 @@
                         <a class="nav-link" aria-current="page" href="index.php?page=1"> Accueil</a>
                     </li>
                     <li class="nav-item  me-3">
-                        <a class="nav-link" href="index.php?page=2">Préstations</a>
+                        <a class="nav-link" href="index.php?page=2">Prestations</a>
                     </li>
                     <li class="nav-item produits dropdown me-3">
                         <!-- Deroulant -->

@@ -15,7 +15,6 @@
                             <option value="">--Sélectionner une categorie--</option>
                             <?php
                             while($dataSC = $reqSC -> fetch()){
-                            // var_dump($dataSC);
                             ?>
                             <option value="<?php echo $dataSC['id'];?>"><?php echo $dataSC['nom_sous_categorie'];?></option>
                             <?php

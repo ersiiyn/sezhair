@@ -22,21 +22,21 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active carousel">
-            <img src="./img/accueil/barbe.jpg" class="d-block w-100" alt="...">
+            <img src="./img/accueil/barbe.jpg" class="d-block w-100 img-fluid" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h1>NOS PRESTATIONS</h1>
                 <a class="fs-5" href="index.php?page=2">En savoir plus</a>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="./img/accueil/produits2.jpg" class="d-block w-100" alt="...">
+            <img src="./img/accueil/produits2.jpg" class="d-block w-100 img-fluid" alt="...">
             <div class="carousel-caption d-none d-md-block carousel">
                 <h1>NOS PRODUITS</h1>
                     <a class="fs-5" href="index.php?page=3">En savoir plus</a>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="./img/accueil/lunette.jpg" class="d-block w-100" alt="...">
+            <img src="./img/accueil/lunette.jpg" class="d-block w-100 img-fluid" alt="...">
             <div class="carousel-caption d-none d-md-block carousel">
                 <h1>MEDIAS</h1>
                     <a class="fs-5" href="index.php?page=4">En savoir plus</a>
