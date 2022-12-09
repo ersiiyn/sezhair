@@ -22,7 +22,7 @@ $email = $_POST['email'];
 $numero = $_POST['numero'];
 
 $query = 'INSERT INTO connexion(nom, prenom, pseudo, mdp, email, numero) 
-            VALUES (:nom, :prenom, :pseudo, :mdp, :email, :numero)';
+        VALUES (:nom, :prenom, :pseudo, :mdp, :email, :numero)';
 $requete = $bdd->prepare($query);
 $requete->bindValue(':nom', $nom, PDO::PARAM_STR);
 $requete->bindValue(':prenom', $prenom, PDO::PARAM_STR);

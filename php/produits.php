@@ -1,6 +1,6 @@
 <div class="container text-center mt-5">
     <div class="row align-items-start">
-        <div class="col">
+        <div class="col border border-1 border-dark col-sm-2">
             <a href="#" class="link-dark">One of three columns</a>
         </div>
         <div class="col">

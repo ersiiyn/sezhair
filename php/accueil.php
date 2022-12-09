@@ -108,7 +108,7 @@
             <p class="texte-sezhair"><?php echo $dataEL[4][5]['contenu'];?></p>
         </div>
         <div class="box-button">
-            <a href="index.php?page=2"><button type="button" class="btn btn-dark btn-lg">Notre préstation</button></a>
+            <a href="index.php?page=2"><button type="button" class="btn btn-dark btn-lg">Notre prestation</button></a>
         </div>
     </div>
 </div>

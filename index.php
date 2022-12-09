@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
     <!-- Lien icon dans l'onglet -->
-    <link rel="icon" href="../sezhair/img/logo.jpg">
+    <link rel="icon" href="../sezhair/img/ico.png">
     <!-- Lien pour la police google font -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet"> <!-- RUBIK -->
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap" rel="stylesheet"><!-- Comfortaa -->
@@ -120,6 +120,9 @@
                 elseif($page==8){
                     include('php/traitement-deco.php');
                 }
+                elseif($page==9){
+                    include('php/panier.php');
+                }
             }
             else{
                 ?>
@@ -157,5 +160,6 @@
     </footer>
     <!-- ...........................................  SCRIPT .................................................. -->
     <script src="assets/bootstrap-5.2.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.js"></script>
 </body>
 </html>

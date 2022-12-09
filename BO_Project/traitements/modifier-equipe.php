@@ -46,7 +46,7 @@
                         <input type="file" class="form-control" id="photo" name="photo"
                             autocomplete="off" value="<?php echo $dataPrs['photo'];?>" accept="image/png, image/jpeg" enctype="multipart/form-data">
                     </div>
-                    <input type="submit" name="envoyer" class="btn btn-primary" value="Modifier">
+                    <input type="submit" name="modif_photo" class="btn btn-primary" value="Modifier">
                     <a type="button" class="btn btn-outline-secondary" href="admin.php?page=1">Annuler</a>
                 </form>
             </div>
