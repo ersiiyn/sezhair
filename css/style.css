@@ -487,6 +487,46 @@
     color: #8D4C00;
 }
 /* ........................................... PRODUITS..................................................*/
+a .lien-produits:hover{
+    color: #B4975A;
+}
+/* ...........................................  TRAIT ..................................................*/
+.box-trait{
+    /* border: solid black 1px; */
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.trait{
+    /* border: solid red 1px; */
+    border-bottom: solid 1px rgb(189, 189, 189);
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.span-trait{
+    margin-bottom: 0.5%;
+}
+
+.span-trait a{
+    margin-bottom: 0.5%;
+    text-decoration: none;
+    color: black;
+}
+
+.span-trait a:hover{
+    color: #B4975A;
+}
+
+.bi-house{
+    font-size: 20px;
+}
+
+/* Produits */
 .box-produits{
     /* border: solid black 3px; */
     width: 100%;

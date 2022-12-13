@@ -90,3 +90,24 @@
     </div>
     <div class="box-image-coiffure"><img src="./img/prestation/haricuts.png"></div>
 </div>
+
+
+
+<div class="card-group col-12 col-sm-6 col-lg-12 mx-auto border border-3 border-dark">
+    <?php
+        $queryP = "SELECT * FROM produits WHERE id_sous_categorie =:id_sous_categorie";
+        $reqP = $bdd->prepare($queryP);
+        $reqP->bindValue(':id_sous_categorie', $dataSC['id'], PDO::PARAM_STR);
+        $reqP->execute();
+        while($dataP = $reqP -> fetch()){
+            // var_dump($dataP);
+    ?>
+    <div class="card p-5">
+        <img src="./img/produits/<?php echo $dataP['photo'];?>" class="card-img-top w-75 mx-auto" alt="...">
+        <div class="card-body mx-auto">
+            <h5 class="card-title"><?php echo $dataP['nom'];?></h5>
+            <p class="card-text fw-bold"><?php echo $dataP['prix'];?> €</p>
+        </div>
+    </div>
+    <?php } ?>
+</div>

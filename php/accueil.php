@@ -32,7 +32,7 @@
             <img src="./img/accueil/produits2.jpg" class="d-block w-100 img-fluid" alt="...">
             <div class="carousel-caption d-none d-md-block carousel">
                 <h1>NOS PRODUITS</h1>
-                    <a class="fs-5" href="index.php?page=3">En savoir plus</a>
+                    <a class="fs-5" href="index.php?page=3&souscat_produits=1">En savoir plus</a>
             </div>
         </div>
         <div class="carousel-item">
@@ -147,7 +147,7 @@
                 <p class="texte-sezhair"><?php echo $dataEL[6][3]['contenu'];?></p>
             </div>
             <div class="box-button-produits">
-                <a href="index.php?page=3"><button type="button" class="btn btn-dark btn-lg">DECOUVRIR</button></a>
+                <a href="index.php?page=3&souscat_produits=1"><button type="button" class="btn btn-dark btn-lg">DECOUVRIR</button></a>
             </div>
         </div>
     </div>
