@@ -54,7 +54,7 @@
 					<li class="nav-item nav-category">Accueil</li>
 					<li class="nav-item">
 						<a href="admin.php?page=1" class="nav-link">
-							<i class="link-icon" data-feather="box"></i>
+							<i class="link-icon" data-feather="users"></i>
 							<span class="link-title">Notre équipe</span>
 						</a>
 					</li>
@@ -62,7 +62,7 @@
 					<li class="nav-item">
 						<a href="admin.php?page=2" class="nav-link">
 							<i class="link-icon" data-feather="list"></i>
-							<span class="link-title">Préstations</span>
+							<span class="link-title">Prestations</span>
 						</a>
 					</li>
 					<li class="nav-item">
@@ -85,15 +85,17 @@
 						</a>
 						<div class="collapse" id="icons">
 							<ul class="nav sub-menu">
+								<?php
+								$querySCP = "SELECT * FROM souscat_produits"; // <- categorie 
+								$reqSCP = $bdd->prepare($querySCP);
+								$reqSCP->execute();
+								// la boucle
+								while($data = $reqSCP -> fetch()){
+									?>
 								<li class="nav-item">
-									<a href="" class="nav-link">Feather Icons</a>
+									<a href="<?php echo 'admin.php?page=5&souscat_produits='.$data["id"];?>" class="nav-link"><?php echo $data["nom"];?></a>
 								</li>
-								<li class="nav-item">
-									<a href="" class="nav-link">Flag Icons</a>
-								</li>
-								<li class="nav-item">
-									<a href="" class="nav-link">Mdi Icons</a>
-								</li>
+								<?php } ?>
 							</ul>
 						</div>
 					</li>
@@ -119,13 +121,10 @@
 					<ul class="navbar-nav">
 						<li class="nav-item dropdown nav-profile">
 							<a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<img src="https://via.placeholder.com/30x30" alt="userr">
+							<?php echo $dataAdm['username'];?> <i class="link-icon" data-feather="user"></i> 
 							</a>
 							<div class="dropdown-menu" aria-labelledby="profileDropdown">
 								<div class="dropdown-header d-flex flex-column align-items-center">
-									<div class="figure mb-3">
-										<img src="https://via.placeholder.com/80x80" alt="">
-									</div>
 									<div class="info text-center">
 										<p class="name font-weight-bold mb-0"><?php echo $dataAdm['username'];?></p>
 										<p class="email text-muted mb-3"><?php echo $dataAdm['nom']. ' ' .$dataAdm['prenom'];?></p>
@@ -136,13 +135,13 @@
 										<li class="nav-item">
 											<a href="admin.php?page=14&id=<?php echo $dataAdm['id'];?>" class="nav-link">
 												<i data-feather="edit"></i>
-												<span>Edit Profile</span>
+												<span>Modifier le profil</span>
 											</a>
 										</li>
 										<li class="nav-item">
 											<a href="index.php" class="nav-link">
 												<i data-feather="log-out"></i>
-												<span>Log Out</span>
+												<span>Deconnexion</span>
 											</a>
 										</li>
 									</ul>

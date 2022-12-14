@@ -4,6 +4,7 @@ if(isset($_GET['souscat_produits'])){
     ?>
     <div class="container-fluid col-12 text-center mt-5 mb-5">
         <div class="row justify-content-center">
+            <!-- Requete pour afficher les categories des produits-->
             <?php
                 $querySCPC = "SELECT * FROM souscat_produits";
                 $reqSCPC = $bdd->prepare($querySCPC);
@@ -13,11 +14,11 @@ if(isset($_GET['souscat_produits'])){
             <div class="col-12 col-sm-6 col-lg p-3">
                 <a class="nav-link link-dark lien-produits" href="index.php?page=3&souscat_produits=<?php echo $dataSCPC['id'];?>"><?php echo $dataSCPC['nom'];?></a>
             </div>
+            <!-- Fin de boucle pour afficher les categories des produits-->
             <?php 
                 }
-            ?> <!-- Fin de boucle -->
+            ?> 
         </div>
-        <!-- Fin div pour le bloc des categories -->
     </div>
     <!-- Affichage du nom de la categorie dans la box trait -->
     <?php
@@ -41,9 +42,7 @@ if(isset($_GET['souscat_produits'])){
         $reqSC = $bdd->prepare($querySC);
         $reqSC->bindValue(':id', $cat, PDO::PARAM_STR);
         $reqSC->execute();
-        // boucle
         while($dataSC = $reqSC -> fetch()){
-            // var_dump($dataSC);
     ?>
     <div class="container mt-5 mb-5">
         <div class="row">
@@ -75,6 +74,6 @@ if(isset($_GET['souscat_produits'])){
 <?php 
 }
 else{
-    echo '<div class="alert alert-danger text-center alert-dismissible fade show mt-5 mb-5" role="alert"> OUPS .. Cette page n\'est pas accessible veuillez retourner a l\'accueil <a class="nav-link text-dark" href="index.php?page=1"> ACCUEIL </a><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+    echo '<div class="alert alert-danger text-center alert-dismissible fade show mt-5 mb-5" role="alert">OUPS .. Cette page n\'est pas accessible, veuillez retourner à l\'accueil. <a class="nav-link text-dark" href="index.php?page=1">ACCUEIL</a><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 } 
 ?> 
