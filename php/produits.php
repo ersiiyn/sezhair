@@ -60,7 +60,29 @@ if(isset($_GET['souscat_produits'])){
                     <div class="card-body mx-auto">
                         <h5 class="card-title"><?php echo $dataP['nom'];?></h5>
                         <p class="card-text"><?php echo $dataP['prix'];?> €</p>
-                        <a href="#" class="btn btn-light">En savoir plus</a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        En savoir plus
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel"><?php echo $dataP['nom'];?></h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img src="./img/produits/<?php echo $dataP['photo'];?>" class="w-100" alt="...">
+                                <?php echo $dataP['description'];?>
+                                <p class="text-primary mx-auto"><?php echo $dataP['prix'];?> €</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>

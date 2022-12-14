@@ -651,7 +651,6 @@ a .lien-produits:hover{
 .box-numero-contact{
     /* border: solid blue 3px; */
     width: 100%;
-    /* height: 30%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -771,19 +770,25 @@ textarea{
 /*Titre*/
 .box-titre{
     /* border: solid black 3px; */
-    background-color: black;
-    width: 100%;
+    background-color: white;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    border-radius: 15px;
+    width: 95%;
     height: 12vh;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 5%;
-    margin-top: 3%;
+    margin-top: 5%;
+    margin-left: 2%;
 }
 
 .titre{
     /* border: solid blue 3px; */
-    background-color: #B4975A;
+    border: solid 2px #B4975A;
+    background-color: white;
+    border-radius: 5px;
     padding: 2.5%;
     width: auto;
     height: auto;
@@ -795,7 +800,7 @@ textarea{
 .texte-coiffure{
     /* border: solid black 1px; */
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color: black;
     font-size: 40px;
     /* font-weight: 700; */
 }
@@ -923,8 +928,11 @@ textarea{
 }
 @media screen and (max-width : 1160px){
     /* Header */
-    .inst, .fb, .medias{
+    .inst, .fb{
         display: none;
+    }
+    .navbar a{
+        font-size: 14px;
     }
     .box-formule{
         width: 45%;
@@ -965,11 +973,14 @@ textarea{
         width: 50%; 
     }
 }
-@media screen and (max-width : 992px){
+@media screen and (max-width : 991px){
     /* Header */
     .inst, .fb, .medias{
         /* Faire apparaitre pour le menu deroulant */
         display: block;
+    }
+    .navbar a{
+        font-size: 16px;
     }
 }
 /* ........................................... Tablette ..................................................*/
@@ -1279,6 +1290,10 @@ textarea{
     }
 }
 @media screen and (max-width : 480px){
+    /* SEZHAIR */
+    .titre-sezhair{
+        font-size: 20px;
+    }
     .texte-formule{
         font-size: 19px;
     }

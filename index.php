@@ -59,7 +59,7 @@
                             ?>
                         </ul>
                     </li>
-                    <li class="nav-item me-3">
+                    <li class="nav-item me-3 medias">
                         <a class="nav-link" href="index.php?page=4">Médias</a>
                     </li>
                     <li class="nav-item  me-3">

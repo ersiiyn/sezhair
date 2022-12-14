@@ -36,7 +36,7 @@ if(isset($_GET['souscat_produits'])){
                             ?>
                             <tbody>
                                 <tr>
-                                    <td class="text-center tab-overflow text-wrap align-middle text-secondary"><?php echo $dataP['nom'];?></td>
+                                    <td class="text-center"><?php echo $dataP['nom'];?></td>
                                     <th class="text-center"><img src="<?php echo '../img/produits/'.$dataP['photo'];?>" width="30%" height="50%"></th>
                                     <td class="tab-overflow text-center text-wrap align-middle text-secondary"><?php echo $dataP['description'];?></td>
                                     <td class="tab-overflow text-center text-wrap align-middle text-secondary"><?php echo $dataP['statut'];?></td>
