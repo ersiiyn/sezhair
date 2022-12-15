@@ -16,7 +16,7 @@ if(isset($_GET['souscat_produits'])){
                 $reqSCPC->execute();
                 while($dataSCPC = $reqSCPC -> fetch()){
             ?>
-            <div class="col-12 col-sm-6 col-lg p-3 border">
+            <div class="col-12 col-sm-6 col-lg p-3">
                 <a class="nav-link link-dark lien-produits" href="index.php?page=3&souscat_produits=<?php echo $dataSCPC['id'];?>"><?php echo $dataSCPC['nom'];?></a>
             </div>
             <!-- Fin de boucle pour afficher les categories des produits-->
