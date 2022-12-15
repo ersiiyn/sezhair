@@ -21,16 +21,17 @@ include "../bdd.php";
         }
     }
     elseif(isset($_POST['modif_photo'])){
+        $id= $_POST['id'];
         // on récupère les infos du fichier
         $infos = pathinfo($_FILES['photo']['name']);
         // on vérifie l'extension en mettant en miniscule
         $ext_up = strtolower($infos['extension']);
         if($ext_up != 'jpg' && $ext_up != 'jpeg' && $ext_up != 'png' && $ext_up != 'bmp' && $ext_up != 'gif') {
             $_SESSION['message'] = '<div class="alert alert-danger text-center alert-dismissible fade show" role="alert">Le fichier séléctionné n\'est pas une image <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
-            header('location:../admin.php?page=1');
+            header('location:../admin.php?page=6&id='.$id);
         }
         else {
-            $id= $_POST['id'];
+            
             $imgDir = '../../img/accueil/';
             $filename = 'avatar-'.time();
             $picture = $imgDir.$filename.'.'.$ext_up;
@@ -46,10 +47,4 @@ include "../bdd.php";
             header('location:../admin.php?page=1');
         }
     }
-if(isset($_POST['id']) && !empty($_POST['id'])){
-    $query = $bdd->prepare("SELECT * FROM presentation WHERE id=:id;");
-    $query->bindValue(':id', $id, PDO::PARAM_INT);
-    $query->execute();
-    $result = $query->fetch();
-}
 ?>

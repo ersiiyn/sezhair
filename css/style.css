@@ -202,10 +202,10 @@
 /* ........................................... ACCUEIL ..................................................*/
 /* Retour en haut */
 #scroll_to_top{
-    /* border: solid 2px red; */
     position: fixed;
     bottom: 18px;
     right: 28px;
+    z-index: 6;
 }
 
 #scroll_to_top img{

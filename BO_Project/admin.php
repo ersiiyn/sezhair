@@ -214,6 +214,12 @@
 					elseif($page == 14){
 						include('pages/profile.php');
 					}
+					elseif($page == 15){
+						include('traitements/modifier-produits.php');
+					}
+					elseif($page == 16){
+						include('traitements/supp-produits.php');
+					}
 				else{
 					$_SESSION['message']= '<div class="alert alert-danger text-center" role="alert"><i class="fa-solid fa-triangle-exclamation me-3"></i>Vous n\'avez pas les droits pour accéder à cette zone</div>';
 					// redirection vers le site (chemin à adapter)

@@ -1,7 +1,7 @@
 <!-- Traitement pour ajouter une photo -->
 <?php
 include "../bdd.php";
-// var_dump($_POST);
+
 if(isset($_POST['ajouter'])){
 
     // on récupère les infos du fichier

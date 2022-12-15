@@ -36,6 +36,7 @@
                 <h4 class="card-title">Modification de la photo</h4>
                 <form class="forms-sample" method="POST" action="traitements/traitement-equipe.php" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $_GET['id'];?>"/>
+                    <input type="hidden" name="id_photo" value="<?php echo $_GET['id'];?>"/>
                     <div class="form-group">
                         <label for="formFileLg" class="form-label">Sélectionner votre photo</label>
                         <input type="file" class="form-control" id="photo" name="photo"

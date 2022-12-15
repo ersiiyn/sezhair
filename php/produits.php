@@ -2,6 +2,11 @@
 if(isset($_GET['souscat_produits'])){
     $cat =$_GET['souscat_produits'];
     ?>
+    <!-- ...........................................  Fleches retour en haut .................................................. -->
+    <div id="scroll_to_top">
+        <a href="#top"><img src="./img/accueil/fleche2.png" alt="Retourner en haut" /></a>
+    </div>
+    <!-- ...........................................  Afficher les categories .................................................. -->
     <div class="container-fluid col-12 text-center mt-5 mb-5">
         <div class="row justify-content-center">
             <!-- Requete pour afficher les categories des produits-->
@@ -11,7 +16,7 @@ if(isset($_GET['souscat_produits'])){
                 $reqSCPC->execute();
                 while($dataSCPC = $reqSCPC -> fetch()){
             ?>
-            <div class="col-12 col-sm-6 col-lg p-3">
+            <div class="col-12 col-sm-6 col-lg p-3 border">
                 <a class="nav-link link-dark lien-produits" href="index.php?page=3&souscat_produits=<?php echo $dataSCPC['id'];?>"><?php echo $dataSCPC['nom'];?></a>
             </div>
             <!-- Fin de boucle pour afficher les categories des produits-->
@@ -74,8 +79,9 @@ if(isset($_GET['souscat_produits'])){
                             </div>
                             <div class="modal-body text-center">
                                 <img src="./img/produits/<?php echo $dataP['photo'];?>" class="w-100" alt="...">
-                                <?php echo $dataP['description'];?>
+                                <?php echo $dataP['descriptions'];?>
                                 <p class="text-primary mx-auto"><?php echo $dataP['prix'];?> €</p>
+                                <p class="text-success mx-auto"><?php echo $dataP['statut'];?></p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
