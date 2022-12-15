@@ -39,8 +39,8 @@ if(isset($_GET['souscat_produits'])){
                                 <tr>
                                     <td class="text-center"><?php echo $dataP['nom'];?></td>
                                     <th class="text-center"><img src="<?php echo '../img/produits/'.$dataP['photo'];?>" width="30%" height="50%"></th>
-                                    <td class="tab-overflow text-center text-wrap align-middle text-secondary"><?php echo $dataP['descriptions'];?></td>
-                                    <td class="tab-overflow text-center text-wrap align-middle text-secondary"><?php echo $dataP['prix'];?> €</td>
+                                    <td class="tab-overflow text-center text-wrap align-middle text-secondary w-20"><?php echo $dataP['descriptions'];?></td>
+                                    <td class="tab-overflow text-center text-wrap align-middle text-secondary w-10"><?php echo $dataP['prix'];?> €</td>
                                     <td class="tab-overflow text-center text-wrap align-middle text-secondary"><?php echo $dataP['statut'];?></td>
                                     <td class="text-center"><a href="admin.php?page=15&id=<?php echo $dataP['id'];?>" class="nav-link text-dark"><i class="link-icon" data-feather="settings"></i></a></td>
                                     <td class="text-center"><a href="admin.php?page=16&id=<?php echo $dataP['id'];?>" class="nav-link text-danger"><i class="link-icon" data-feather="trash-2"></i></a></td>
