@@ -74,11 +74,11 @@ if(isset($_GET['souscat_produits'])){
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel"><?php echo $dataP['nom'];?></h1>
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel"><strong><?php echo $dataP['nom'];?></strong></h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body text-center">
-                                        <img src="./img/produits/<?php echo $dataP['photo'];?>" class="w-100" alt="...">
+                                        <img src="./img/produits/<?php echo $dataP['photo'];?>" class="col-12" alt="...">
                                         <?php echo $dataP['descriptions'];?>
                                         <p class="text-primary mx-auto"><?php echo $dataP['prix'];?> €</p>
                                         <p class="text-success mx-auto"><?php echo $dataP['statut'];?></p>
