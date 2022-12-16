@@ -59,6 +59,7 @@ else{
     </div>
     <div class="box-image-formule"><img class="image-formule" src="<?php echo $dataSC['image'];?>"></div>
 </div>
+<!-- Fin boule while pour les sous categories -->
 <?php
     }
 ?>

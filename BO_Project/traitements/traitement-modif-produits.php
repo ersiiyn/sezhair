@@ -19,8 +19,7 @@ if(isset($_POST['modif_produits'])){
         $editequery->bindValue(':descriptions', $descriptions, PDO::PARAM_STR);
         $editequery->bindValue(':prix', $prix, PDO::PARAM_STR);
         $editequery ->execute();
-        // Message de modification
-        // var_dump($idsouscat);
+        // Message de modification;
         $_SESSION['message'] = '<div class="alert alert-success text-center alert-dismissible fade show" role="alert">Modification réussi <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
         header('location:../admin.php?page=5&souscat_produits='.$idsouscat);
     }

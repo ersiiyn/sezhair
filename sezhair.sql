@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 24 nov. 2022 à 09:14
+-- Généré le : ven. 16 déc. 2022 à 08:00
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -163,15 +163,13 @@ CREATE TABLE IF NOT EXISTS `contacter` (
   `email` varchar(255) NOT NULL,
   `mot` varchar(500) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `contacter`
 --
 
 INSERT INTO `contacter` (`id`, `nom`, `email`, `mot`) VALUES
-(4, 'BIL', 'ersiiyn@outlook.fr', 'test3'),
-(5, 'BIL', 'ersiiyn@outlook.fr', 'test9'),
 (6, 'BIL', 'ersiiyn@outlook.fr', 'test9'),
 (7, 'BIL', 'ersiiyn@outlook.fr', 'test10'),
 (8, 'BIL', 'ersiiyn@outlook.fr', 'test1'),
@@ -181,7 +179,11 @@ INSERT INTO `contacter` (`id`, `nom`, `email`, `mot`) VALUES
 (13, 'ersin', 'lala@efef', 'je test'),
 (14, 'BIL', 'ersiiyn@outlook.fr', 'thgeqgerg'),
 (15, 'thth', 'thth@rgrg', 'thth'),
-(16, 'BIL', 'ersiiyn@outlook.fr', 'test');
+(16, 'BIL', 'ersiiyn@outlook.fr', 'test'),
+(17, 'BI', 'ersiiyn@outlook.fr', 'dfdfdf'),
+(18, 'kevin', 'ersiiyn@outlook.fr', 'test404'),
+(19, 'kevin', 'ersiiyn@outlook.fr', 'test408'),
+(20, 'dfsdf', 'rgfergre@rgrgr.com', 'wesh roh');
 
 -- --------------------------------------------------------
 
@@ -208,7 +210,7 @@ INSERT INTO `element` (`id`, `id_bloc`, `nom`, `contenu`) VALUES
 (2, 1, 'services', 'services'),
 (3, 2, 'image 1', './img/accueil/icon2.png'),
 (4, 2, 'titre1', 'Couper et Tailler'),
-(5, 2, 'texte1', 'Experts en matière de coupe de cheveux. \nIls sont rapide mais soigneux et vous font de jolies coupes.'),
+(5, 2, 'texte1', 'Experts en matière de coupe de cheveux. \nIls sont rapides mais soigneux et vous font de jolies coupes.'),
 (6, 3, 'image2', './img/accueil/icon1.png'),
 (7, 3, 'titre2', 'Lavage & Séchage'),
 (8, 3, 'texte2', 'Prenez place dans nos fauteuils en cuir fin, adossez-vous et laissez-nous vous faire mousser une tête fraîche de manière luxueuse.'),
@@ -298,8 +300,8 @@ CREATE TABLE IF NOT EXISTS `presentation` (
 
 INSERT INTO `presentation` (`id`, `descriptions`, `photo`, `nom`) VALUES
 (1, 'Gérant du salon de coiffure.\r\nA vos cotés depuis 30 ans pour des coupes soigneusement coiffé et rapide', 'sezgin-photo.jpg', 'Sezgin'),
-(2, 'Employé du salon de coiffure.', 'hassan.jpg', 'Mehmet'),
-(3, 'Stagiaire du salon de coiffure.', 'ekin.jpg', 'Devran');
+(2, 'Employé du salon de coiffure.\r\n8 ans d\'expérience', 'hassan.jpg', 'Devran'),
+(3, 'Stagiaire du salon de coiffure.', 'avatar-1671013260.jpg', 'Mehmet');
 
 -- --------------------------------------------------------
 
@@ -328,7 +330,6 @@ INSERT INTO `prestations` (`id`, `id_sous_categorie`, `formule`, `prix`) VALUES
 (9, 2, 'Barbe Classique', 10),
 (10, 2, 'Taille De Barbe Dégradé', 12),
 (11, 2, 'Shampoing Barbe Brushing', 15),
-(12, 3, 'Epilation Sourcils Au Fil', 8),
 (13, 3, 'Epilation A La Cire', 3),
 (14, 3, 'Masque Au Visage Classique', 12),
 (15, 3, 'Soin Du Visage,Soin Serviette Chaude', 20),
@@ -345,20 +346,34 @@ CREATE TABLE IF NOT EXISTS `produits` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_sous_categorie` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
-  `description` varchar(255) NOT NULL,
+  `descriptions` varchar(255) NOT NULL,
   `prix` float NOT NULL,
   `photo` varchar(255) NOT NULL,
   `statut` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_souscat_produits` (`id_sous_categorie`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `produits`
 --
 
-INSERT INTO `produits` (`id`, `id_sous_categorie`, `nom`, `description`, `prix`, `photo`, `statut`) VALUES
-(1, 1, 'Bros 7 red', 'Gel rouge', 5.6, 'gel-rouge.jpg', 'Disponible');
+INSERT INTO `produits` (`id`, `id_sous_categorie`, `nom`, `descriptions`, `prix`, `photo`, `statut`) VALUES
+(1, 1, 'Fiber gum', 'Hair gel - Noir- Extrem look', 10, 'gel-ultra-noir.jpg', 'disponible'),
+(2, 1, 'Ultra strong argan', 'Hair gel - Vert- Extrem look', 10, 'gel-ultra-vert.jpg', 'disponible'),
+(3, 1, 'Ultra strong keratin', 'Hair gel - Bleu - Extrem look', 10, 'gel-ultra-bleu.jpg', 'disponible'),
+(4, 1, 'Aqua 5 max', 'Bleu', 5, 'gel-bleu.jpg', 'disponible'),
+(6, 2, 'Cologne - Exclusive', 'Rouge', 6, 'after-rouge.jpg', 'disponible'),
+(7, 2, 'Cologne - Lemon', 'Jaune', 5, 'after-jaune.jpg', 'disponible'),
+(8, 1, 'Aqua 3 max ', 'Blanc', 5, 'gel-blanc3.jpg', 'disponible'),
+(9, 1, 'Aqua 8 max', 'Noir', 5, 'gel-noir.jpg', 'disponible'),
+(10, 1, 'Aqua 6 max', 'Gris', 5, 'gel-gris.jpg', 'disponible'),
+(11, 1, 'Aqua 7 max', 'Cire capillaire pour un coiffage parfait - \r\n Différentes variétés avec échelle de force -\r\n Parfums fruités', 5.6, 'gel-rouge.jpg', 'disponible'),
+(12, 2, 'Cologne - Ultimate', 'Vert', 6, 'after-vert.jpg', 'disponible'),
+(13, 1, 'Aqua 4 max', 'Orange', 5, 'gel-orange.jpg', 'disponible'),
+(14, 1, 'Matte wax', 'Maximum hold - Vert ', 6, 'gel-vert.jpg', 'disponible'),
+(15, 3, 'Crazy aqua gel', 'Immortal - Violet', 7, 'avatar-1671112666.jpeg', 'disponible'),
+(17, 8, 'Beard mustache oil', '30ml', 12, 'huile-barbe.jpg', 'disponible');
 
 -- --------------------------------------------------------
 
@@ -412,7 +427,7 @@ CREATE TABLE IF NOT EXISTS `sous_categorie` (
 INSERT INTO `sous_categorie` (`id`, `id_categorie`, `nom_sous_categorie`, `image`) VALUES
 (1, 1, 'Présentation coiffure', './img/prestation/benchmark.png'),
 (2, 1, 'Présentation barbier', './img/prestation/echec.png'),
-(3, 1, 'Présentation soins et relaxations', './img/prestation/haricuts.png');
+(3, 1, 'Soins et relaxations', './img/prestation/haricuts.png');
 
 --
 -- Contraintes pour les tables déchargées
