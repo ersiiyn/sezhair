@@ -57,21 +57,15 @@
     if(isset($_GET['page'])){
         $id =$_GET['page'];
         // requete
-        $queryBL = "SELECT * FROM  bloc WHERE id_page = :id ";
-        $reqBL = $bdd->prepare($queryBL);
-        $reqBL->bindValue(':id', $id, PDO::PARAM_STR);
-        $reqBL->execute();
-        // var_dump($data);
-        $dataBL = $reqBL -> fetchAll();
+        $dataBL= recupBloc($bdd, $id);
+        // var_dump($dataBL);
         // Incremente
         for($i = 0 ; $i < count($dataBL); $i++){
-            $queryEL = "SELECT * FROM  element WHERE id_bloc = :id ";
-            $reqEL = $bdd->prepare($queryEL);
-            $reqEL->bindValue(':id', $dataBL[$i]['id'], PDO::PARAM_STR);
-            $reqEL->execute();
-            $dataEL[$i] = $reqEL -> fetchAll();
+            $dataEL[$i] = recupElement($bdd, $dataBL[$i]['id']);
+            
         }
         // var_dump($dataEL);
+
 ?>
 <div class="box-service">
     <div class="box-titre-services">
@@ -119,18 +113,16 @@
         <div class="box-titre-presentation"><span class="presentation"><?php echo mb_strtoupper($dataEL[5][1]['contenu']);?></span></div>
     </div>
     <div class="grande-box-presentation">
-        <!-- Requete pour les presentations -->
         <?php
-            $queryP = "SELECT * FROM presentation";
-            $reqP = $bdd->prepare($queryP);
-            $reqP->execute();
-            while($dataP = $reqP -> fetch()){
-                // var_dump($dataP);
+        // Requete pour les presentations
+            $data = recupEquipe($bdd);
+
+            foreach($data as $equipe){
         ?>
         <div class="petite-box-presentation">
-            <div class="box-image-presentation"><img class="image-presentation" src="<?php echo '../public/assets/img/accueil/'.$dataP['photo'];?>"></div>
-            <div class="box-nom-presentation"><span class="nom-presentation"><?php echo $dataP['nom'];?></span></div>
-            <div class="box-texte-presentation"><span class="texte-presentation"><?php echo $dataP['descriptions'];?><br></span></div>
+            <div class="box-image-presentation"><img class="image-presentation" src="<?php echo '../public/assets/img/accueil/'.$equipe['photo'];?>"></div>
+            <div class="box-nom-presentation"><span class="nom-presentation"><?php echo $equipe['nom'];?></span></div>
+            <div class="box-texte-presentation"><span class="texte-presentation"><?php echo $equipe['descriptions'];?><br></span></div>
         </div>
         <?php
             }

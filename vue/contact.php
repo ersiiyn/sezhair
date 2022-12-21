@@ -10,11 +10,7 @@
 <?php
     // Requete pour les categories 
     $id = 3;
-    $queryC = "SELECT * FROM categorie WHERE id=:id";
-    $reqC = $bdd->prepare($queryC);
-    $reqC->bindValue(':id', $id, PDO::PARAM_STR);
-    $reqC->execute();
-    $dataC = $reqC -> fetch();
+    $dataC = recupImageSezhair($bdd,$id);
 ?>
 <div class="box-image">
     <img src="<?php echo '../public/assets/img/contact/'.$dataC['image_categorie'];?>" width="100%" height="100%">
@@ -22,11 +18,7 @@
 <!-- ...........................................  ADRESSE HORAIRE .................................................. -->
 <?php
     // Requete pour contact
-    $queryCO = "SELECT * FROM contact";
-    $reqCO = $bdd->prepare($queryCO);
-    $reqCO->execute();
-    $dataCO = $reqCO -> fetchAll();
-        // var_dump($dataCO);
+    $dataCO = recupCoordonnees($bdd);
 ?>
 <div class="box-adresse-contact">
     <div class="box-numero-contact"><span class="numero-contact"><?php echo $dataCO[0]['num'];?></span></div>

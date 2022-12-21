@@ -50,12 +50,10 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Nos produits</a>
                         <ul class="dropdown-menu">
                             <?php
-                            $querySCP = "SELECT * FROM souscat_produits"; // categorie 
-                            $reqSCP = $bdd->prepare($querySCP);
-                            $reqSCP->execute();
+                            $dataSCP = menuProduits($bdd); // récupération des sous catégoriepour le menu déroulant
                             // la boucle
-                            while($data = $reqSCP -> fetch()){
-                                echo '<li><a class="dropdown-item" href="index.php?page=3&souscat_produits='.$data["id"].'">'.$data["nom"].'</a></li>';
+                            foreach($dataSCP as $sous_cat){
+                                echo '<li><a class="dropdown-item" href="index.php?page=3&souscat_produits='.$sous_cat["id"].'">'.$sous_cat["nom"].'</a></li>';
                             }
                             ?>
                         </ul>
