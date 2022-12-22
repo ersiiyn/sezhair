@@ -98,4 +98,43 @@
         $req->execute();
     }
 
+    // Equipe 
+    // Requete pour recuperer l'equipe
+    function recupEquipe($bdd){
+        $queryPrs = "SELECT * FROM presentation";
+        $reqPrs = $bdd->prepare($queryPrs);
+        $reqPrs->execute();
+        $dataPrs = $reqPrs -> fetchAll();
+
+        return $dataPrs;
+    }
+
+    // Requete pour recuperer l'equipe dans modifier 
+    function recupEquipeById($bdd){
+        $queryPrsID = "SELECT nom,descriptions,photo FROM presentation WHERE id=:id";
+        $reqPrsID = $bdd->prepare($queryPrsID);
+        $reqPrsID->bindValue(':id', $_GET['id'], PDO::PARAM_INT);
+        $reqPrsID->execute();
+        $dataPrsID = $reqPrsID -> fetch();
+
+        return $dataPrsID;
+    }
+
+    // Requete pour modifier l'equipe
+    function uptadeEquipe($bdd, $id, $nom, $descriptions){
+        $editequery = $bdd->prepare('UPDATE presentation SET nom=:nom, descriptions=:descriptions WHERE id=:id');
+        $editequery->bindValue(':id', $id, PDO::PARAM_INT);
+        $editequery->bindValue(':nom', $nom, PDO::PARAM_STR);
+        $editequery->bindValue(':descriptions', $descriptions, PDO::PARAM_STR);
+        $editequery ->execute();
+    }
+
+    // Requete pour modifier l'image dans equipe
+    function uptadeImageEquipe($bdd, $picture, $id){
+        $query = 'UPDATE presentation SET photo=:photo WHERE id=:id';
+        $req = $bdd->prepare($query);
+        $req->bindValue(':photo', $picture, PDO::PARAM_STR);
+        $req->bindValue(':id', $id, PDO::PARAM_INT);
+        $req->execute();
+    }
 ?>

@@ -1,17 +1,17 @@
 <?php
 require '../modele/bdd.php';
+require '../modele/fonction.php';
+
     if(isset($_POST['modif_equipe'])){
         if(isset($_POST['id']) && !empty($_POST['id'])
             && isset($_POST['nom']) && !empty($_POST['nom'])
             && isset($_POST['descriptions']) && !empty($_POST['descriptions'])){
+
             $id=htmlspecialchars($_POST['id']);
             $nom = $_POST['nom'];
             $descriptions = $_POST['descriptions'];
-            $editequery = $bdd->prepare('UPDATE presentation SET nom=:nom, descriptions=:descriptions WHERE id=:id');
-            $editequery->bindValue(':id', $id, PDO::PARAM_INT);
-            $editequery->bindValue(':nom', $nom, PDO::PARAM_STR);
-            $editequery->bindValue(':descriptions', $descriptions, PDO::PARAM_STR);
-            $editequery ->execute();
+            // Requete
+            $uptadeEquipe = uptadeEquipe($bdd, $id, $nom, $descriptions);
             // Message de modification
             if(isset($_POST['modif_equipe'])){
                 $_SESSION['message'] = '<div class="alert alert-success text-center alert-dismissible fade show" role="alert">Modification réussi <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
@@ -30,18 +30,14 @@ require '../modele/bdd.php';
             header('location:../public/admin.php?page=6&id='.$id);
         }
         else {
-            
             $imgDir = '../../public/assets/img/accueil/';
-            $filename = 'avatar-'.time();
+            $filename = 'equipe-'.time();
             $picture = $imgDir.$filename.'.'.$ext_up;
             $tmp_file = $_FILES['photo']['tmp_name'];
             move_uploaded_file($tmp_file, $picture);
             $picture = $filename.'.'.$ext_up;
-            $query = 'UPDATE presentation SET photo=:photo WHERE id=:id';
-            $req = $bdd->prepare($query);
-            $req->bindValue(':photo', $picture, PDO::PARAM_STR);
-            $req->bindValue(':id', $id, PDO::PARAM_INT);
-            $req->execute();
+            // Requete 
+            $uptadeImageEquipe = uptadeImageEquipe($bdd, $picture, $id);
             $_SESSION['message'] = '<div class="alert alert-success text-center alert-dismissible fade show" role="alert">Photo modifié avec succés <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
             header('location:../public/admin.php?page=1');
         }

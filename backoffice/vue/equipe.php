@@ -14,10 +14,8 @@
                             </tr>
                         </thead>
                         <?php
-                        $queryPrs = "SELECT * FROM presentation";
-                        $reqPrs = $bdd->prepare($queryPrs);
-                        $reqPrs->execute();
-                        while($dataPrs = $reqPrs -> fetch()){
+                        $dataPrs = recupEquipe($bdd);
+                        foreach($dataPrs as $dataPrs){
                         // var_dump($dataPrs);
                         ?>
                         <tbody>
