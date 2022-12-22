@@ -13,16 +13,14 @@
                             </tr>
                         </thead>
                         <?php
-                        $queryMed = "SELECT * FROM medias";
-                        $reqMed = $bdd->prepare($queryMed);
-                        $reqMed->execute();
-                        while($dataMed = $reqMed -> fetch()){
-                        // var_dump($dataMed);
+                        $dataMed = recupMedias($bdd);
+                        foreach($dataMed as $medias){
+                        // var_dump($medias);
                         ?>
                         <tbody>
                             <tr>
-                                <th class="py-5"><img src="<?php echo '../../public/assets/img/coupe/'.$dataMed['photo'];?>" alt="image" width="80%"></th>
-                                <td class="text-center"><a href="admin.php?page=9&id=<?php echo $dataMed['id'];?>" class="nav-link text-danger"><i class="link-icon" data-feather="trash-2"></i></a></td>
+                                <th class="py-5"><img src="<?php echo '../../public/assets/img/coupe/'.$medias['photo'];?>" alt="image" width="80%"></th>
+                                <td class="text-center"><a href="admin.php?page=9&id=<?php echo $medias['id'];?>" class="nav-link text-danger"><i class="link-icon" data-feather="trash-2"></i></a></td>
                             </tr>
                         </tbody>
                         <?php

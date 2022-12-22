@@ -1,6 +1,8 @@
 <?php
 // var_dump($_POST['id']);
 require '../modele/bdd.php';
+require '../modele/fonction.php';
+
 if(isset($_POST)){
     if(isset($_POST['id']) && !empty($_POST['id'])
         && isset($_POST['num']) && !empty($_POST['num'])
@@ -16,18 +18,11 @@ if(isset($_POST)){
         $adresse = htmlspecialchars($_POST['adresse']);
         $ville = htmlspecialchars($_POST['ville']);
 
-        $editequeryCo = $bdd->prepare('UPDATE contact SET num=:num, num2=:num2, horaire=:horaire, adresse=:adresse, ville=:ville WHERE id=:id');
-        $editequeryCo->bindValue(':id', $id, PDO::PARAM_INT);
-        $editequeryCo->bindValue(':num', $num, PDO::PARAM_STR);
-        $editequeryCo->bindValue(':num2', $num2, PDO::PARAM_STR);
-        $editequeryCo->bindValue(':horaire', $horaire, PDO::PARAM_STR);
-        $editequeryCo->bindValue(':adresse', $adresse, PDO::PARAM_STR);
-        $editequeryCo->bindValue(':ville', $ville, PDO::PARAM_STR);
-        $editequeryCo ->execute();
+        $modifCoord = modifCoord($bdd, $id, $num, $num2, $horaire, $adresse, $ville);
 
         // Message de modification
-            $_SESSION['message'] = '<div class="alert alert-success text-center alert-dismissible fade show" role="alert">Modification réussi <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
-            header('location:../public/admin.php?page=4');
+        $_SESSION['message'] = '<div class="alert alert-success text-center alert-dismissible fade show" role="alert">Modification réussi <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+        header('location:../public/admin.php?page=4');
     }
 }
 ?>

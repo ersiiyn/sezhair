@@ -64,6 +64,16 @@ function recupElement($bdd, $idBlock){
         return $dataCO;
     }
 
+    // Requete pour envoyer un message
+    function envoiMessage($bdd, $nom, $email, $mot){
+        $query = 'INSERT INTO contacter(nom, email, mot) VALUES (:nom, :email, :mot)';
+        $requete = $bdd->prepare($query);
+        $requete->bindValue(':nom', $nom, PDO::PARAM_STR);
+        $requete->bindValue(':email', $email, PDO::PARAM_STR);
+        $requete->bindValue(':mot', $mot, PDO::PARAM_STR);
+        $requete->execute();
+    }
+
     //Médias 
     // requete pour récuperer les photos
     function recupPhotoMedias($bdd){
@@ -96,5 +106,75 @@ function recupElement($bdd, $idBlock){
         $dataPR = $reqPR -> fetchAll();
 
         return $dataPR;
+    }
+
+    //Produits
+    // requete pour récuperer les sous categories des produits pour afficher dans la nav produits
+    function recupNavProduits($bdd){
+        $querySCPN = "SELECT * FROM souscat_produits";
+        $reqSCPN = $bdd->prepare($querySCPN);
+        $reqSCPN->execute();
+        $dataSCPN = $reqSCPN -> fetchAll();
+
+        return $dataSCPN;
+    }
+
+    // requete pour récuperer les sous categories des produits
+    function recupSCatProduits($bdd, $cat){
+        $querySCPT = "SELECT * FROM souscat_produits WHERE id= :id";
+        $reqSCPT = $bdd->prepare($querySCPT);
+        $reqSCPT->bindValue(':id', $cat, PDO::PARAM_INT);
+        $reqSCPT->execute();
+        $dataSCPT = $reqSCPT -> fetch();
+
+        return $dataSCPT;
+    }
+
+    // requete préparé pour recup les sous categories dans une boucle
+    function recupSCatBoucleProduits($bdd, $cat){
+        $querySC = "SELECT * FROM souscat_produits WHERE id= :id";
+        $reqSC = $bdd->prepare($querySC);
+        $reqSC->bindValue(':id', $cat, PDO::PARAM_INT);
+        $reqSC->execute();
+        $dataSC = $reqSC -> fetchAll();
+
+        return $dataSC;
+    }
+
+    // requete préparé pour recup les produits
+    function recupProduits($bdd, $id_souscat){
+        $queryP = "SELECT * FROM produits WHERE id_sous_categorie =:id_sous_categorie";
+        $reqP = $bdd->prepare($queryP);
+        $reqP->bindValue(':id_sous_categorie', $id_souscat, PDO::PARAM_INT);
+        $reqP->execute();
+        $dataP = $reqP -> fetchAll();
+
+        return $dataP;
+    }
+
+    // Inscription 
+    // Requete pour s'inscrire 
+    function insertInscription($bdd, $nom, $prenom, $pseudo, $hash, $email, $numero){
+        $query = 'INSERT INTO connexion(nom, prenom, pseudo, mdp, email, numero) VALUES (:nom, :prenom, :pseudo, :mdp, :email, :numero)';
+        $requete = $bdd->prepare($query);
+        $requete->bindValue(':nom', $nom, PDO::PARAM_STR);
+        $requete->bindValue(':prenom', $prenom, PDO::PARAM_STR);
+        $requete->bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
+        $requete->bindValue(':mdp', $hash, PDO::PARAM_STR);
+        $requete->bindValue(':email', $email, PDO::PARAM_STR);
+        $requete->bindValue(':numero', $numero, PDO::PARAM_INT);
+        $requete->execute();
+    }
+
+    // Connexion
+    // Requete pour se connecter 
+    function recupConnexion($bdd, $pseudo){
+        $query = "SELECT * FROM  connexion WHERE pseudo=:pseudo";
+        $req = $bdd->prepare($query);
+        $req->bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
+        $req->execute();
+        $dataCo = $req->fetch();
+
+        return $dataCo;
     }
 ?>

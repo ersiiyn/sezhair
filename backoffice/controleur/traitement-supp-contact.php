@@ -1,13 +1,13 @@
 <?php
     require '../modele/bdd.php';
-    $id=htmlspecialchars($_POST['id']);
-    $req = $bdd->prepare('DELETE FROM contacter WHERE id=:id');
-    $req->bindValue(':id', $id, PDO::PARAM_INT);
-    $req->execute();
+    require '../modele/fonction.php';
+
+    $id = htmlspecialchars($_POST['id']);
+    $suppMessage = suppMessage($bdd, $id);
 
     // Message de confirmation
     if (isset($_POST['supp_contact'])){
-        $_SESSION['message'] = '<div class="alert alert-success text-center alert-dismissible fade show" role="alert">Message supprimé <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div></div>';
+        $_SESSION['message'] = '<div class="alert alert-success text-center alert-dismissible fade show" role="alert">Message suppprimé<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
         header('location:../public/admin.php?page=4');
     }
 ?>

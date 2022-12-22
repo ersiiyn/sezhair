@@ -1,9 +1,8 @@
 <?php
 require '../modele/bdd.php';
+require '../modele/fonction.php';
 $id=htmlspecialchars($_POST['id']);
-$req = $bdd->prepare('DELETE FROM medias WHERE id=:id');
-$req->bindValue(':id', $id, PDO::PARAM_INT);
-$req->execute();
+$suppMedias = suppMedias($bdd, $id);
 
 // Message de confirmation
 if (isset($_POST['supp_med'])){

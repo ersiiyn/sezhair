@@ -1,6 +1,7 @@
 <!-- Traitement pour ajouter une photo -->
 <?php
 require '../modele/bdd.php';
+require '../modele/fonction.php';
 
 if(isset($_POST['ajouter'])){
 
@@ -20,10 +21,8 @@ if(isset($_POST['ajouter'])){
         $tmp_file = $_FILES['photo']['tmp_name'];
         move_uploaded_file($tmp_file, $picture);
         $picture = $filename.'.'.$ext_up;
-        $query = 'INSERT INTO medias (photo) VALUES (:photo)';
-        $req = $bdd->prepare($query);
-        $req->bindValue(':photo', $picture, PDO::PARAM_STR);
-        $req->execute();
+        // requete pour inserer les photos
+        $ajoutMedias = ajoutMedias($bdd, $picture);
         $_SESSION['message'] = '<div class="alert alert-success text-center alert-dismissible fade show" role="alert">Photo ajouté avec succés <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
         header('location:../public/admin.php?page=3');
     }

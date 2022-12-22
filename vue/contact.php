@@ -13,7 +13,7 @@
     $dataC = recupImageSezhair($bdd,$id);
 ?>
 <div class="box-image">
-    <img src="<?php echo '../public/assets/img/contact/'.$dataC['image_categorie'];?>" width="100%" height="100%">
+    <img src="<?php echo '../public/assets/img/contact/'.htmlspecialchars($dataC['image_categorie']);?>" width="100%" height="100%">
 </div>
 <!-- ...........................................  ADRESSE HORAIRE .................................................. -->
 <?php
@@ -21,10 +21,10 @@
     $dataCO = recupCoordonnees($bdd);
 ?>
 <div class="box-adresse-contact">
-    <div class="box-numero-contact"><span class="numero-contact"><?php echo $dataCO[0]['num'];?></span></div>
-    <div class="box-numero-contact"><span class="numero-contact"><?php echo $dataCO[0]['num2'];?></span></div>
-    <div class="box-horaire-contact"><span class="horaire-contact"><?php echo $dataCO[0]['horaire'];?></span></div>
-    <div class="petite-box-adresse-contact"><span class="adresse-contact"><?php echo $dataCO[0]['adresse'];?><br>
+    <div class="box-numero-contact"><span class="numero-contact"><?php echo htmlspecialchars($dataCO[0]['num']);?></span></div>
+    <div class="box-numero-contact"><span class="numero-contact"><?php echo htmlspecialchars($dataCO[0]['num2']);?></span></div>
+    <div class="box-horaire-contact"><span class="horaire-contact"><?php echo htmlspecialchars($dataCO[0]['horaire']);?></span></div>
+    <div class="petite-box-adresse-contact"><span class="adresse-contact"><?php echo htmlspecialchars($dataCO[0]['adresse']);?><br>
         <?php echo $dataCO[0]['ville'];?></span>
     </div>
 </div>

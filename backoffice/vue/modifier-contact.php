@@ -4,12 +4,9 @@
             <div class="card-body">
                 <h4 class="card-title">Modification contact</h4>
                 <?php
-                $queryCo = "SELECT num, num2, horaire, adresse, ville FROM contact WHERE id=:id";
-                $reqCo = $bdd->prepare($queryCo);
-                $reqCo->bindValue(':id', $_GET['id'], PDO::PARAM_INT);
-                $reqCo->execute();
-                $dataCo = $reqCo -> fetch();
-                // var_dump($dataPR);
+                $id = $_GET['id'];
+                $dataCo = recupCoordById($bdd, $id);
+                // var_dump($dataCo);
                 ?>
                 <form class="forms-sample" method="POST" action="../controleur/traitement-modif-contact.php">
                     <input type="hidden" name="id" value="<?php echo $_GET['id'];?>"/> 
