@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-10 grid-margin stretch-card mx-auto">
+    <div class="col-12 col-lg-10 grid-margin stretch-card mx-auto">
         <div class="card">               
             <div class="card-body">
                 <h6 class="card-title">Préstations</h6> 
@@ -8,11 +8,11 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th class="text-center text-dark">Nom de la formule</th>
-                                <th class="text-center text-dark">Tarifs</th>
-                                <th class="text-dark text-center">Categorie</th>
-                                <th class="text-center text-dark">Modification</th>
-                                <th class="text-center text-dark">Supprimer</th>
+                                <th class="text-dark">Nom de la formule</th>
+                                <th class="text-dark">Tarifs</th>
+                                <th class="text-dark">Categorie</th>
+                                <th class="text-dark">Modification</th>
+                                <th class="text-dark">Supprimer</th>
                             </tr>
                         </thead>
                         <?php
@@ -31,10 +31,10 @@
                         <tbody>
                             <tr>
                                 <td class="tab-overflow text-wrap align-middle text-secondary"><?php echo $dataPR['formule'];?></td>
-                                <td class="text-center text-secondary"><?php echo $dataPR['prix'].' €';?></td>
-                                <td class="text-center text-secondary"><?php echo $dataSC['nom_sous_categorie'];?></td>
-                                <td class="text-center"><a href="admin.php?page=7&id=<?php echo $dataPR['id'];?>" class="nav-link text-dark"><i class="link-icon" data-feather="settings"></i></a></td>
-                                <td class="text-center"><a href="admin.php?page=8&id=<?php echo $dataPR['id'];?>" class="nav-link text-danger"><i class="link-icon" data-feather="trash-2"></i></a></td>
+                                <td class="text-secondary"><?php echo $dataPR['prix'].' €';?></td>
+                                <td class="text-secondary"><?php echo $dataSC['nom_sous_categorie'];?></td>
+                                <td><a href="admin.php?page=7&id=<?php echo $dataPR['id'];?>" class="nav-link text-dark"><i class="link-icon" data-feather="settings"></i></a></td>
+                                <td><a href="admin.php?page=8&id=<?php echo $dataPR['id'];?>" class="nav-link text-danger"><i class="link-icon" data-feather="trash-2"></i></a></td>
                             </tr>
                         </tbody>
                         <?php

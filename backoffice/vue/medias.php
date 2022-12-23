@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-6 grid-margin stretch-card mx-auto">
+    <div class="col-lg-6 grid-margin stretch-card mx-auto">
         <div class="card">            
             <div class="card-body">
                 <h6 class="card-title">Médias</h6>

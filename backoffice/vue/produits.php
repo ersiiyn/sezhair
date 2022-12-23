@@ -3,7 +3,7 @@ if(isset($_GET['souscat_produits'])){
     $cat =$_GET['souscat_produits'];
 ?>
     <div class="row">
-        <div class="col-md-10 grid-margin stretch-card mx-auto">
+        <div class="col-12 col-lg-10 grid-margin stretch-card mx-auto">
             <div class="card">
                 <div class="card-body">
                     <?php 
