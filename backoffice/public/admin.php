@@ -221,6 +221,9 @@
 					elseif($page == 16){
 						include('../vue/supp-produits.php');
 					}
+					elseif($page == 17){
+						include('../vue/ajout-produits.php');
+					}
 				else{
 					$_SESSION['message']= '<div class="alert alert-danger text-center" role="alert"><i class="fa-solid fa-triangle-exclamation me-3"></i>Vous n\'avez pas les droits pour accéder à cette zone</div>';
 					// redirection vers le site (chemin à adapter)

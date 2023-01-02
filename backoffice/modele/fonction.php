@@ -120,7 +120,7 @@
         return $dataPrsID;
     }
 
-    // Requete pour modifier l'equipe
+    // Requete pour modifier l'equipe dans traitement-equipe
     function uptadeEquipe($bdd, $id, $nom, $descriptions){
         $editequery = $bdd->prepare('UPDATE presentation SET nom=:nom, descriptions=:descriptions WHERE id=:id');
         $editequery->bindValue(':id', $id, PDO::PARAM_INT);
@@ -129,7 +129,7 @@
         $editequery ->execute();
     }
 
-    // Requete pour modifier l'image dans equipe
+    // Requete pour modifier l'image dans traitement-equipe
     function uptadeImageEquipe($bdd, $picture, $id){
         $query = 'UPDATE presentation SET photo=:photo WHERE id=:id';
         $req = $bdd->prepare($query);

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 16 déc. 2022 à 08:00
+-- Généré le : lun. 02 jan. 2023 à 13:22
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -92,10 +92,10 @@ CREATE TABLE IF NOT EXISTS `categorie` (
 --
 
 INSERT INTO `categorie` (`id`, `nom_categorie`, `image_categorie`) VALUES
-(1, 'prestations', './img/prestations.png'),
-(2, 'medias', './img/medias.png'),
-(3, 'contact', './img/contact.png'),
-(4, 'produits', './img/produits.jpg');
+(1, 'prestations', 'prestations.png'),
+(2, 'medias', 'medias.png'),
+(3, 'contact', 'contact.png'),
+(4, 'produits', 'produits.jpg');
 
 -- --------------------------------------------------------
 
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `connexion` (
   `email` varchar(255) NOT NULL,
   `numero` int(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `connexion`
@@ -122,7 +122,12 @@ CREATE TABLE IF NOT EXISTS `connexion` (
 INSERT INTO `connexion` (`id`, `nom`, `prenom`, `pseudo`, `mdp`, `email`, `numero`) VALUES
 (1, 'BIL', 'Kévin', 'ersiiyn', '$2y$10$8xzQWLbRl5B7HAUfV6bjRu8N/ZmanNA5GJt/zGHThsD4MNASqswcC', 'ersiiyn@outlook.fr', 781607280),
 (2, 'Lel', 'Cedric', 'Cece57', '$2y$10$mHGC9JHCHw34lSVOF2o36OtT8nbpeNQoXKMgW9N61xzOuXNcQqR56', 'ersiiyn@outlook.fr', 781607280),
-(4, 'Bil', 'mehmet', 'mehmet57', '$2y$10$iy9iIhbql0uis0oPB2hhROJVQaPkhAZBHFp5Of63nSEgMyriwo8UK', 'ersiiyn@outlook.fr', 781607280);
+(4, 'Bil', 'mehmet', 'mehmet57', '$2y$10$iy9iIhbql0uis0oPB2hhROJVQaPkhAZBHFp5Of63nSEgMyriwo8UK', 'ersiiyn@outlook.fr', 781607280),
+(5, 'Lavoh', 'Dider', 'didi57', '$2y$10$4GFdoXp8poz4sg9NZIbFruMiMYS.coTN9XS3fD95iQpL4YBZymK9a', 'didier@outlook.fr', 781606060),
+(6, 'dcdvc', 'fdvfv', 'fdvdfv', '$2y$10$LsrUaSp1hnlioioK2PoG0eLbunnBqWcEoJDst.cdB/pNIzUM/XNMy', 'cdffever@vrgege.fr', 707070707),
+(7, 'fbdfb', 'dfbdfb', 'dfbdfbdf', '$2y$10$XpO3iYYqyAymhi7MqDYdj.aoShVnfnSt6xgDH0oufmfbEVYNhQwQ2', 'test@kaka.fr', 708090405),
+(8, 'Test', 'Fonction', 'fontion57', '$2y$10$VbogDdZ14RsYN.fCf/GQauA.SqhDp9wGakg60JAG9UHPuiPITYl8e', 'test@fonction.fr', 704010508),
+(9, 'BIL', 'Kévin', 'ersiiyn57', '$2y$10$MVF80uaCAh9GyYzoYqzHnuyMPTu3hwpawOiNO8e8vNNa6StZJP9kq', 'ersiiyn@outlook.fr', 781607280);
 
 -- --------------------------------------------------------
 
@@ -161,19 +166,15 @@ CREATE TABLE IF NOT EXISTS `contacter` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `mot` varchar(500) NOT NULL,
+  `mot` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `contacter`
 --
 
 INSERT INTO `contacter` (`id`, `nom`, `email`, `mot`) VALUES
-(6, 'BIL', 'ersiiyn@outlook.fr', 'test9'),
-(7, 'BIL', 'ersiiyn@outlook.fr', 'test10'),
-(8, 'BIL', 'ersiiyn@outlook.fr', 'test1'),
-(9, 'BIL', 'ersiiyn@outlook.fr', 'test20'),
 (10, 'BIL', 'ersiiyn@outlook.fr', 'essaie 1'),
 (11, 'BIL', 'ersiiyn@outlook.fr', 'test message'),
 (13, 'ersin', 'lala@efef', 'je test'),
@@ -183,7 +184,11 @@ INSERT INTO `contacter` (`id`, `nom`, `email`, `mot`) VALUES
 (17, 'BI', 'ersiiyn@outlook.fr', 'dfdfdf'),
 (18, 'kevin', 'ersiiyn@outlook.fr', 'test404'),
 (19, 'kevin', 'ersiiyn@outlook.fr', 'test408'),
-(20, 'dfsdf', 'rgfergre@rgrgr.com', 'wesh roh');
+(21, 'dididi', 'testmessage@gmail.com', 'test nouveau dossier'),
+(22, 'dididi', 'testmessage@gmail.com', 'test nouveau dossier'),
+(23, 'dididi', 'testmessage@gmail.com', 'test nouveau dossier'),
+(24, 'dididi', 'testmessage@gmail.com', 'test nouveau dossier'),
+(25, 'dididi', 'rgfreger@hotmil.fr', 'test fonction');
 
 -- --------------------------------------------------------
 
@@ -241,7 +246,7 @@ CREATE TABLE IF NOT EXISTS `medias` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `photo` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `medias`
@@ -257,7 +262,7 @@ INSERT INTO `medias` (`id`, `photo`) VALUES
 (16, 'coupe10.jpg'),
 (17, 'coupe11.jpg'),
 (18, 'coupe12.jpg'),
-(19, 'coupe13.jpg');
+(22, 'coupe13.jpg');
 
 -- --------------------------------------------------------
 
@@ -301,7 +306,7 @@ CREATE TABLE IF NOT EXISTS `presentation` (
 INSERT INTO `presentation` (`id`, `descriptions`, `photo`, `nom`) VALUES
 (1, 'Gérant du salon de coiffure.\r\nA vos cotés depuis 30 ans pour des coupes soigneusement coiffé et rapide', 'sezgin-photo.jpg', 'Sezgin'),
 (2, 'Employé du salon de coiffure.\r\n8 ans d\'expérience', 'hassan.jpg', 'Devran'),
-(3, 'Stagiaire du salon de coiffure.', 'avatar-1671013260.jpg', 'Mehmet');
+(3, 'Stagiaire du salon de coiffure.', 'ekin.jpg', 'Mehmet');
 
 -- --------------------------------------------------------
 
@@ -317,7 +322,7 @@ CREATE TABLE IF NOT EXISTS `prestations` (
   `prix` float NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_SC_prestations` (`id_sous_categorie`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `prestations`
@@ -329,11 +334,12 @@ INSERT INTO `prestations` (`id`, `id_sous_categorie`, `formule`, `prix`) VALUES
 (7, 1, 'Coupe Enfants', 13),
 (9, 2, 'Barbe Classique', 10),
 (10, 2, 'Taille De Barbe Dégradé', 12),
-(11, 2, 'Shampoing Barbe Brushing', 15),
 (13, 3, 'Epilation A La Cire', 3),
 (14, 3, 'Masque Au Visage Classique', 12),
 (15, 3, 'Soin Du Visage,Soin Serviette Chaude', 20),
-(16, 1, 'Coupe Enfants Dégradé à Blanc', 15);
+(16, 1, 'Coupe Enfants Dégradé à Blanc', 15),
+(17, 3, 'Epilation Sourcils Au Fil', 8),
+(18, 2, 'Shampoing Barbe Brushing', 15);
 
 -- --------------------------------------------------------
 
@@ -346,13 +352,13 @@ CREATE TABLE IF NOT EXISTS `produits` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_sous_categorie` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
-  `descriptions` varchar(255) NOT NULL,
+  `descriptions` text NOT NULL,
   `prix` float NOT NULL,
   `photo` varchar(255) NOT NULL,
   `statut` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_souscat_produits` (`id_sous_categorie`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `produits`
@@ -372,8 +378,11 @@ INSERT INTO `produits` (`id`, `id_sous_categorie`, `nom`, `descriptions`, `prix`
 (12, 2, 'Cologne - Ultimate', 'Vert', 6, 'after-vert.jpg', 'disponible'),
 (13, 1, 'Aqua 4 max', 'Orange', 5, 'gel-orange.jpg', 'disponible'),
 (14, 1, 'Matte wax', 'Maximum hold - Vert ', 6, 'gel-vert.jpg', 'disponible'),
-(15, 3, 'Crazy aqua gel', 'Immortal - Violet', 7, 'avatar-1671112666.jpeg', 'disponible'),
-(17, 8, 'Beard mustache oil', '30ml', 12, 'huile-barbe.jpg', 'disponible');
+(17, 7, 'Beard mustache oil', '30ml', 12, 'huile-barbe.jpg', 'disponible'),
+(21, 1, 'Forming aqua gel', 'Immortal men power system - Hair wax forming aqua gel provocative shapes', 5, 'immortal-rouge.jpg', 'disponible'),
+(23, 1, 'Red one wax ', 'Cire coiffante forte tenue 150ml est une cire coiffante riche en vitamine et minéraux. Pour tous types de cheveux, elle est parfaite pour coiffer les cheveux crépus, frisés et bouclés et maitrise parfaitement les cheveux rebelles et les petits cheveux du bord (babyhair). Sa texture non grasse s\'applique facilement et plaque parfaitement les cheveux et laisse un fini brillant aux cheveux. Cire coiffante forte tenue 150m laisse un parfum frais de pastèque. *Tenue longue durée *Application facile *Fini brillant *Senteur pastèque *Texture non grasse *Grand format 150 ml', 8, 'red-rouge.jpg', 'disponible'),
+(24, 1, 'Red One Full Force Blue', 'Vous cherchez une cire pour plaquer les cheveux, les ébouriffer ou créer une coupe sur mesure ?  Un produit qui offre une longue durée maintenue toute la journée ? Une pâte qui vous apporte un parfum fruité ? Il vous faut la cire Red One Full Force Blue 150 ml. Cette cire coiffante Full Force est validée par une majorité de coiffeurs/barber et de nombreux clients. Retrouvez dans notre boutique en ligne Fstyles une variété de Cire Red One.', 10, 'redone-bleu.jpg', 'disponible'),
+(25, 6, 'Rasoir Point Platinum Pt5177', 'Description du moteur AC (linéaire): Moteur durable AC (linéaire) Moteur rapide et puissant. Il est fabriqué en acier japonais 10000 tr/min. La durée de vie est de 5 ans. Fonctionnement silencieux. Description de la batterie : Batterie ICR Lithium Ion d\'une capacité de 2200 mAh. Temps de charge : 70 minutes / Temps de travail : 120 minutes. Il peut être rechargé 1500 fois. Protection contre les surcharges. Utilisation filaire et sans fil Description des lames de coupe : Japon 440C, lames en acier inoxydable à haute teneur en carbone. Dureté Rockwell 62-63 degrés pour une clarté maximale et une durée de vie plus longue. Matériau inoxydable. Longueur de coupe réglable de 0,3 à 3 mm Lames fixes de 45 mm de large Autre descriptif : Adaptateur câble rond souple 3 m ou sans fil, fonction d\'utilisation. Peigne en 5 tailles différentes + Brosse de nettoyage + Bouteille d\'huile 100-240V, 50-60Hz Sortie : 5V 2A Taille du produit (L/l/H) 154 X 48 X 52 mm Poids : 330 gr\r\nUn maximum de 5 pièces de ce produit peut être commandé. Trendyol se réserve le droit d\'annuler les commandes de plus de 5 unités.\r\nPlus de 10 titres sont proposés à la vente au prix de la campagne.\r\nLe prix de vente du produit que vous avez examiné est déterminé par le vendeur.\r\nUn produit peut être vendu par plusieurs vendeurs. Les vendeurs de produits proposés à la vente par plusieurs vendeurs sont répertoriés en fonction du prix qu\'ils ont fixé pour le produit, des évaluations du vendeur, de l\'état de la livraison, des promotions sur les produits, que la cargaison soit gratuite ou non, que les produits puissent être livrés rapidement livraison, ainsi que le stock et les catégories de produits.\r\n', 70, 'rasoir-platinum.jpg', 'disponible');
 
 -- --------------------------------------------------------
 
@@ -395,14 +404,13 @@ CREATE TABLE IF NOT EXISTS `souscat_produits` (
 --
 
 INSERT INTO `souscat_produits` (`id`, `id_categorie`, `nom`) VALUES
-(1, 4, 'Gel bros'),
+(1, 4, 'Les gels'),
 (2, 4, 'Après shampoing'),
-(3, 4, 'Gel immortal'),
+(3, 4, 'Hair spray'),
 (4, 4, 'Cream cologne'),
 (5, 4, 'Laque'),
 (6, 4, 'Tondeuse/Lame'),
-(7, 4, 'Hair spray'),
-(8, 4, 'Huile barbe');
+(7, 4, 'Huile barbe');
 
 -- --------------------------------------------------------
 

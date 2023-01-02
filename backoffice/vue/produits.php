@@ -14,7 +14,8 @@ if(isset($_GET['souscat_produits'])){
                     $dataSP = $reqSP -> fetch()
                     ?>
                     <h4 class="card-title"> Les produits <span class="text-warning"><?php echo $dataSP['nom'];?></span></h4>
-                    <a type="button" class="btn btn-light" href="admin.php?page=12">Ajouter un produits +</a>
+                    <input type="hidden" name="souscat_produits" value="<?php echo $dataSP['id'];?>"/>
+                    <a type="button" class="btn btn-light" href="admin.php?page=17">Ajouter un produits +</a>
                     <div class="table-responsive">
                         <table class="table mt-3">
                             <thead>
