@@ -87,10 +87,10 @@ function recupElement($bdd, $idBlock){
 
     //Prestation 
     // requete pour récuperer les sous categories
-    function recupSousCategorie($bdd, $id_SC){
+    function recupSousCategorie($bdd, $id_C){
         $querySC = "SELECT * FROM sous_categorie WHERE id_categorie=:id_categorie";
         $reqSC = $bdd->prepare($querySC);
-        $reqSC->bindValue(':id_categorie', $id_SC, PDO::PARAM_STR);
+        $reqSC->bindValue(':id_categorie', $id_C, PDO::PARAM_STR);
         $reqSC->execute();
         $dataSC = $reqSC -> fetchAll();
 

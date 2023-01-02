@@ -51,7 +51,7 @@ if(isset($_GET['souscat_produits'])){
             ?>
             <div class="col-12 col-sm-6 col-lg-4 mt-5">
                 <div class="card">
-                    <img src="../public/assets/img/produits/<?php echo $produits['photo'];?>" class="card-img-top w-50 mx-auto" alt="...">
+                    <img src="../public/assets/img/produits/<?php echo $produits['photo'];?>" class="card-img-top w-50 mx-auto" alt="produits">
                     <div class="card-body mx-auto">
                         <h5 class="card-title"><?php echo $produits['nom'];?></h5>
                         <p class="card-text"><?php echo $produits['prix'];?> €</p>

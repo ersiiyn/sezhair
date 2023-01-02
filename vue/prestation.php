@@ -9,12 +9,12 @@
 <?php
     // Requete pour les sous categories 
     $cote = true;
-    $id_SC = $dataC['id'];
-    $dataSC = recupSousCategorie($bdd, $id_SC);
-    foreach($dataSC as $sous_cat){
+    $id_C = $dataC['id'];
+    $dataSC = recupSousCategorie($bdd, $id_C);
+    foreach($dataSC as $dataSC){
 ?>
 <div class="box-titre">
-    <div class="titre"><span class="texte-coiffure"><?php echo mb_strtoupper($sous_cat['nom_sous_categorie']);?></span></div>
+    <div class="titre"><span class="texte-coiffure"><?php echo mb_strtoupper($dataSC['nom_sous_categorie']);?></span></div>
 </div>
 <!-- Tarifs -->
 <?php
@@ -33,9 +33,10 @@ else{
         <div class="formule">
             <?php
                 // Requete pour les formules
+                $id_SC = $dataSC['id'];
                 $dataPR = recupFormule($bdd, $id_SC);
                 foreach($dataPR as $formule){
-                    // var_dump($dataPR);
+                // var_dump($dataPR);
             ?>
             <div class="box-vert">
                 <div class="box-nom-formule"><span class="texte-formule"><?php echo $formule['formule'].' .....';?></span></div>
@@ -46,7 +47,7 @@ else{
             ?>
         </div>
     </div>
-    <div class="box-image-formule"><img class="image-formule" src="../public/assets/<?php echo $sous_cat['image'];?>"></div>
+    <div class="box-image-formule"><img class="image-formule" src="../public/assets/<?php echo $dataSC['image'];?>"></div>
 </div>
 <!-- Fin boule while pour les sous categories -->
 <?php
