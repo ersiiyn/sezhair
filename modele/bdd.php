@@ -12,5 +12,4 @@ catch(PDOexception $e)
     echo'echec de la connexion: '.$e->getMessage();
     exit;
 }
-    // Fin de bdd
 ?>

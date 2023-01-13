@@ -46,7 +46,7 @@
 }
 
 .navbar li a:hover{
-    color: #BE9462;
+    color: #8D4C00;
 }
 
 .sezhair{
@@ -59,7 +59,7 @@
 }
 
 .s, .c{
-    color: #BE9462;
+    color: #8D4C00;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-shadow: 4px 7px 4px rgba(0, 0, 0, 0.2);
 }
@@ -483,7 +483,6 @@
 .nom-presentation{
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
-    font-style: italic;
     color: #8D4C00;
 }
 /* ........................................... PRODUITS..................................................*/
