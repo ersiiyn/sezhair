@@ -4,9 +4,7 @@
             <div class="card-body">
                 <h4 class="card-title">Ajouter une formule</h4>
                 <?php
-                $querySC = "SELECT * FROM sous_categorie";
-                $reqSC = $bdd->prepare($querySC);
-                $reqSC->execute();
+                $dataSC = recupSousCategorie($bdd);
                 ?>
                 <form class="forms-sample" method="POST" action="../controleur/traitement-ajout-prest.php">
                     <div class="form-group">
@@ -14,9 +12,9 @@
                         <select name="id" id="id">
                             <option value="">--Sélectionner une categorie--</option>
                             <?php
-                            while($dataSC = $reqSC -> fetch()){
+                            foreach($dataSC as $sc){
                             ?>
-                            <option value="<?php echo $dataSC['id'];?>"><?php echo $dataSC['nom_sous_categorie'];?></option>
+                            <option value="<?php echo $sc['id'];?>"><?php echo $sc['nom_sous_categorie'];?></option>
                             <?php
                                 }
                             ?>
@@ -29,7 +27,7 @@
                     </div>
                     <div class="form-group">
                         <label for="prix">Prix</label>
-                        <input type="text" class="form-control text-secondary" id="prix" name="prix"
+                        <input type="number" class="form-control text-secondary" id="prix" name="prix"
                             autocomplete="off">
                     </div>
                     <input type="submit" name="ajouter" class="btn btn-primary" value="Ajouter">

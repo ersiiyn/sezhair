@@ -139,13 +139,23 @@
     }
 
     // Prestations
-    // Requete pour recuperer la prestation 
-    function recupPrestation($bdd){
+    // Requete pour recuperer les sous categorie des prestations
+    function recupSousCategorie($bdd){
         $querySC = "SELECT * FROM sous_categorie";
         $reqSC = $bdd->prepare($querySC);
         $reqSC->execute();
-        $dataSC = $reqSC -> fetchAll();
+        $dataSC = $reqSC->fetchAll();
 
         return $dataSC;
+    }
+
+    // Requete pour ajouter les formules dans prestations
+    function insertPrestation($bdd, $formule, $prix, $id) {
+        $query = 'INSERT INTO prestations(formule, prix, id_sous_categorie) VALUES (:formule, :prix, :id_sous_categorie)';
+        $requete = $bdd->prepare($query);
+        $requete->bindValue(':formule', $formule, PDO::PARAM_STR);
+        $requete->bindValue(':prix', $prix, PDO::PARAM_STR);
+        $requete->bindValue(':id_sous_categorie', $id, PDO::PARAM_INT);
+        $requete->execute();
     }
 ?>
