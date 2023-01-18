@@ -13,13 +13,14 @@
                             </tr>
                         </thead>
                         <?php
+                        // Récuperation des photos
                         $dataMed = recupMedias($bdd);
                         foreach($dataMed as $medias){
                         // var_dump($medias);
                         ?>
                         <tbody>
                             <tr>
-                                <th class="py-5"><img src="<?php echo '../../public/assets/img/coupe/'.$medias['photo'];?>" alt="image" width="80%"></th>
+                                <th class="py-5"><img src="<?php echo '../../public/assets/img/coupe/'.$medias['photo'];?>" alt="image" width="65%"></th>
                                 <td class="text-center"><a href="admin.php?page=9&id=<?php echo $medias['id'];?>" class="nav-link text-danger"><i class="link-icon" data-feather="trash-2"></i></a></td>
                             </tr>
                         </tbody>

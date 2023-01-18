@@ -140,6 +140,10 @@
                 <div class="logo-suivre1"><a href="https://www.facebook.com/Sezhair/"><i class="fa-brands fa-facebook-f fa-2xl"></i></a></div>
                 <div class="logo-suivre2"><a href="https://instagram.com/sezhair?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram"></i></a></div>
             </div>
+            <div class="box-logo-suivre">
+                <div class="Mention"><a class="mention" href="https://www.facebook.com/Sezhair/">Mention legale</a></div>
+                <div class="Condition"><a class="mention" href="https://instagram.com/sezhair?igshid=YmMyMTA2M2Y=">Condition génerale</a></div>
+            </div>
         </div>
         <div class="box-contacter">
             <div class="box-titre-contacter"><span class="titre-suivre">NOUS CONTACTER</span></div>

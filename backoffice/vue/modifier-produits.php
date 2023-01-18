@@ -12,6 +12,7 @@
                 ?>
                 <form class="forms-sample" method="POST" action="../controleur/traitement-modif-produits.php">
                     <input type="hidden" name="id" value="<?php echo $_GET['id'];?>"/> 
+                    <input type="hidden" name="souscat" value="<?php echo $dataP['id_sous_categorie'];?>"/>
                     <div class="form-group">
                         <label for="nom">Nom</label>
                         <input type="text" class="form-control text-secondary" id="nom" name="nom" value="<?php echo $dataP['nom'];?>"

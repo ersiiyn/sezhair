@@ -137,4 +137,15 @@
         $req->bindValue(':id', $id, PDO::PARAM_INT);
         $req->execute();
     }
+
+    // Prestations
+    // Requete pour recuperer la prestation 
+    function recupPrestation($bdd){
+        $querySC = "SELECT * FROM sous_categorie";
+        $reqSC = $bdd->prepare($querySC);
+        $reqSC->execute();
+        $dataSC = $reqSC -> fetchAll();
+
+        return $dataSC;
+    }
 ?>
