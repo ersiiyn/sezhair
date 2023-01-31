@@ -23,12 +23,12 @@
                     <div class="form-group">
                         <label for="formule">Nom de la formule</label>
                         <input type="text" class="form-control text-secondary" id="formule" name="formule"
-                            autocomplete="off">
+                            autocomplete="off" required="">
                     </div>
                     <div class="form-group">
                         <label for="prix">Prix</label>
                         <input type="number" class="form-control text-secondary" id="prix" name="prix"
-                            autocomplete="off">
+                            autocomplete="off" required="">
                     </div>
                     <input type="submit" name="ajouter" class="btn btn-primary" value="Ajouter">
                     <a type="button" class="btn btn-outline-secondary" href="admin.php?page=2">Annuler</a>

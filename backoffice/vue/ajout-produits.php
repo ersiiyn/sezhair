@@ -4,9 +4,7 @@
             <div class="card-body">
                 <h4 class="card-title">Ajouter un produits</h4>
                 <?php
-                $querySP = "SELECT * FROM souscat_produits";
-                $reqSP = $bdd->prepare($querySP);
-                $reqSP->execute();
+                $sousCatProduitsBoucle = recupSousCatProduitsBoucle($bdd);
                 ?>
                 <form class="forms-sample" method="POST" action="../controleur/traitement-ajout-prest.php">
                     <div class="form-group">
@@ -14,9 +12,9 @@
                         <select name="id" id="id">
                             <option value="">--Sélectionner une categorie--</option>
                             <?php
-                            while($dataSP = $reqSP -> fetch()){
+                            foreach($sousCatProduitsBoucle as $souscat){
                             ?>
-                            <option value="<?php echo $dataSP['id'];?>"><?php echo $dataSP['nom'];?></option>
+                            <option value="<?php echo $souscat['id'];?>"><?php echo $souscat['nom'];?></option>
                             <?php
                                 }
                             ?>
@@ -54,13 +52,6 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Photo du produits</h4>
-                <?php
-                $queryP = "SELECT * FROM produits WHERE id=:id";
-                $reqP = $bdd->prepare($queryP);
-                $reqP->bindValue(':id', $_GET['id'], PDO::PARAM_INT);
-                $reqP->execute();
-                $dataP = $reqP -> fetch();
-                ?>
                 <form class="forms-sample" method="POST" action="../controleur/traitement-ajout-produits.php" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $_GET['id'];?>"/>
                     <input type="hidden" name="souscat_produits" value="<?php echo $dataP['id'];?>"/>

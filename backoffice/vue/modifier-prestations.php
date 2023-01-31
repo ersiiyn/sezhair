@@ -4,11 +4,8 @@
             <div class="card-body">
                 <h4 class="card-title">Modification préstations</h4>
                 <?php
-                $queryPR = "SELECT formule,prix FROM prestations WHERE id=:id";
-                $reqPR = $bdd->prepare($queryPR);
-                $reqPR->bindValue(':id', $_GET['id'], PDO::PARAM_INT);
-                $reqPR->execute();
-                $dataPR = $reqPR -> fetch();
+                $id = $_GET['id'];
+                $dataPR = recupFormulePrix($bdd, $id);
                 // var_dump($dataPR);
                 ?>
                 <form class="forms-sample" method="POST" action="../controleur/traitement-prestations.php">

@@ -158,4 +158,80 @@
         $requete->bindValue(':id_sous_categorie', $id, PDO::PARAM_INT);
         $requete->execute();
     }
+
+    // Requete pour recuperer les sous categorie des prestation
+    function recupPrestations($bdd, $id_sous_categorie) {
+        $queryPR = "SELECT * FROM prestations WHERE id_sous_categorie=:id_sous_categorie";
+        $reqPR = $bdd->prepare($queryPR);
+        $reqPR->bindValue(':id_sous_categorie', $id_sous_categorie, PDO::PARAM_INT);
+        $reqPR->execute();
+        $dataPR = $reqPR->fetchAll();
+        return $dataPR;
+    }
+
+    // Requete pour recuperer les sous categorie des prestation
+    function recupFormulePrix($bdd, $id) {
+        $queryPR = "SELECT formule, prix FROM prestations WHERE id=:id";
+        $reqPR = $bdd->prepare($queryPR);
+        $reqPR->bindValue(':id', $id, PDO::PARAM_INT);
+        $reqPR->execute();
+        $dataPR = $reqPR->fetch();
+        return $dataPR;
+    }
+
+    // Requete pour modifier les formules dans prestation
+    function updatePrestation($bdd, $id, $formule, $prix) {
+        $editequeryPR = $bdd->prepare('UPDATE prestations SET formule=:formule, prix=:prix WHERE id=:id');
+        $editequeryPR->bindValue(':id', $id, PDO::PARAM_INT);
+        $editequeryPR->bindValue(':formule', $formule, PDO::PARAM_STR);
+        $editequeryPR->bindValue(':prix', $prix, PDO::PARAM_STR);
+        $editequeryPR ->execute();
+    }
+
+    // Requete pour recuperer les formules dans prestation 
+    function recupFormule($bdd, $id) {
+        $query = "SELECT formule FROM prestations WHERE id=:id";
+        $requete = $bdd->prepare($query);
+        $requete->bindValue(':id', $id, PDO::PARAM_INT);
+        $requete->execute();
+        $dataForm = $requete->fetch();
+        return $dataForm;
+    }
+
+    // Requete pour supprimer les formules dans prestation
+    function deleteFormule($bdd, $id){
+        $req = $bdd->prepare('DELETE FROM prestations WHERE id=:id');
+        $req->bindValue(':id', $id, PDO::PARAM_INT);
+        $req->execute();
+    }
+
+    // Produits
+    // Requete pour recuperer les sous categorie des produits
+    function recupSousCatProduits($bdd, $cat) {
+        $querySP = "SELECT * FROM souscat_produits WHERE id=:id";
+        $requeteSP = $bdd->prepare($querySP);
+        $requeteSP->bindValue(':id', $cat, PDO::PARAM_INT);
+        $requeteSP->execute();
+        $dataSP = $requeteSP->fetch();
+        return $dataSP;
+    }
+
+    // Requete pour recuperer les produits
+    function recupProduits($bdd, $cat) {
+        $queryP = "SELECT * FROM produits WHERE id_sous_categorie=:id_sous_categorie";
+        $requeteP = $bdd->prepare($queryP);
+        $requeteP->bindValue(':id_sous_categorie', $cat, PDO::PARAM_STR);
+        $requeteP->execute();
+        $dataP = $requeteP->fetchAll();
+        return $dataP;
+    }
+
+    // Requete pour recuperer les sous categorie des produits en boucle 
+    function recupSousCatProduitsBoucle($bdd) {
+        $querySP = "SELECT * FROM souscat_produits";
+        $requeteSP = $bdd->prepare($querySP);
+        $requeteSP->execute();
+        $dataSP = $requeteSP->fetchAll();
+        return $dataSP;
+    }
 ?>

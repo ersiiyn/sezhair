@@ -1,9 +1,6 @@
 <?php 
-    $query = "SELECT formule FROM prestations WHERE id=:id";
-    $requete = $bdd->prepare($query);
-    $requete->bindValue(':id', $_GET['id'], PDO::PARAM_INT);
-    $requete->execute();
-    $data = $requete -> fetch();  
+    $id = $_GET['id'];
+    $dataForm = recupFormule($bdd, $id);
 ?>
 <form method="POST" action="../controleur/traitement-supp-pres.php">        
     <div class="px-4 py-5 my-5 text-center">
@@ -12,7 +9,7 @@
             <p class="lead">Attention si vous supprimer votre élément, il n'apparaîtra plus dans votre liste.
                 Êtes-vous sûr de bien vouloir supprimer
             </p>
-            <p class="lead mb-4 text-danger"><?php echo $data['formule'].' ?';?></p>
+            <p class="lead mb-4 text-danger"><?php echo $dataForm['formule'].' ?';?></p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <input type="hidden" name="id" value="<?php echo $_GET['id'];?>"/> 
                 <input class="btn btn-danger btn-lg" type="submit" value="Supprimer" name="supp_prestation">

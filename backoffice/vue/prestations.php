@@ -16,25 +16,20 @@
                             </tr>
                         </thead>
                         <?php
-                        $querySC = "SELECT * FROM sous_categorie";
-                        $reqSC = $bdd->prepare($querySC);
-                        $reqSC->execute();
-                        while($dataSC = $reqSC -> fetch()){
-                        // var_dump($dataSC);
-                        $queryPR = "SELECT * FROM prestations WHERE id_sous_categorie=:id_sous_categorie";
-                        $reqPR = $bdd->prepare($queryPR);
-                        $reqPR->bindValue(':id_sous_categorie', $dataSC['id'], PDO::PARAM_STR);
-                        $reqPR->execute();
-                        while($dataPR = $reqPR -> fetch()){
-                        // var_dump($dataPR);
+                        $dataSC = recupSousCategorie($bdd);
+                        foreach($dataSC as $sc){
+                        // var_dump($sc);
+                        $dataPR = recupPrestations($bdd, $sc['id']);
+                        foreach($dataPR as $pr){
+                        // var_dump($pr);
                         ?>
                         <tbody>
                             <tr>
-                                <td class="tab-overflow text-wrap align-middle text-secondary"><?php echo $dataPR['formule'];?></td>
-                                <td class="text-secondary"><?php echo $dataPR['prix'].' €';?></td>
-                                <td class="text-secondary"><?php echo $dataSC['nom_sous_categorie'];?></td>
-                                <td><a href="admin.php?page=7&id=<?php echo $dataPR['id'];?>" class="nav-link text-dark"><i class="link-icon" data-feather="settings"></i></a></td>
-                                <td><a href="admin.php?page=8&id=<?php echo $dataPR['id'];?>" class="nav-link text-danger"><i class="link-icon" data-feather="trash-2"></i></a></td>
+                                <td class="tab-overflow text-wrap align-middle text-secondary"><?php echo $pr['formule'];?></td>
+                                <td class="text-secondary"><?php echo $pr['prix'].' €';?></td>
+                                <td class="text-secondary"><?php echo $sc['nom_sous_categorie'];?></td>
+                                <td><a href="admin.php?page=7&id=<?php echo $pr['id'];?>" class="nav-link text-dark"><i class="link-icon" data-feather="settings"></i></a></td>
+                                <td><a href="admin.php?page=8&id=<?php echo $pr['id'];?>" class="nav-link text-danger"><i class="link-icon" data-feather="trash-2"></i></a></td>
                             </tr>
                         </tbody>
                         <?php

@@ -7,14 +7,10 @@ if(isset($_GET['souscat_produits'])){
             <div class="card">
                 <div class="card-body">
                     <?php 
-                    $querySP = "SELECT * FROM souscat_produits WHERE id =:id";
-                    $reqSP = $bdd->prepare($querySP);
-                    $reqSP->bindValue(':id', $cat, PDO::PARAM_INT);
-                    $reqSP->execute();
-                    $dataSP = $reqSP -> fetch()
+                    $souscat_produits = recupSousCatProduits($bdd, $cat);
                     ?>
-                    <h4 class="card-title"> Les produits <span class="text-warning"><?php echo $dataSP['nom'];?></span></h4>
-                    <input type="hidden" name="souscat_produits" value="<?php echo $dataSP['id'];?>"/>
+                    <h4 class="card-title"> Les produits <span class="text-warning"><?php echo $souscat_produits['nom'];?></span></h4>
+                    <input type="hidden" name="souscat_produits" value="<?php echo $souscat_produits['id'];?>"/>
                     <a type="button" class="btn btn-light" href="admin.php?page=17">Ajouter un produits +</a>
                     <div class="table-responsive">
                         <table class="table mt-3">
@@ -30,21 +26,18 @@ if(isset($_GET['souscat_produits'])){
                                 </tr>
                             </thead>
                             <?php
-                            $queryP = "SELECT * FROM produits WHERE id_sous_categorie =:id_sous_categorie";
-                            $reqP = $bdd->prepare($queryP);
-                            $reqP->bindValue(':id_sous_categorie', $cat, PDO::PARAM_STR);
-                            $reqP->execute();
-                            while($dataP = $reqP -> fetch()){
+                            $produits = recupProduits($bdd, $cat);
+                            foreach($produits as $produit){
                             ?>
                             <tbody>
                                 <tr>
-                                    <td class="text-center"><?php echo $dataP['nom'];?></td>
-                                    <th class="text-center"><img src="<?php echo '../../public/assets/img/produits/'.$dataP['photo'];?>" width="30%" height="50%"></th>
-                                    <td class="tab-overflow text-center text-wrap align-middle text-secondary w-20"><?php echo $dataP['descriptions'];?></td>
-                                    <td class="tab-overflow text-center text-wrap align-middle text-secondary w-10"><?php echo $dataP['prix'];?> €</td>
-                                    <td class="tab-overflow text-center text-wrap align-middle text-secondary"><?php echo $dataP['statut'];?></td>
-                                    <td class="text-center"><a href="admin.php?page=15&id=<?php echo $dataP['id'];?>" class="nav-link text-dark"><i class="link-icon" data-feather="settings"></i></a></td>
-                                    <td class="text-center"><a href="admin.php?page=16&id=<?php echo $dataP['id'];?>" class="nav-link text-danger"><i class="link-icon" data-feather="trash-2"></i></a></td>
+                                    <td class="text-center"><?php echo $produit['nom'];?></td>
+                                    <th class="text-center"><img src="<?php echo '../../public/assets/img/produits/'.$produit['photo'];?>" width="40%" height="50%"></th>
+                                    <td class="tab-overflow text-center text-wrap align-middle text-secondary w-20"><?php echo $produit['descriptions'];?></td>
+                                    <td class="tab-overflow text-center text-wrap align-middle text-secondary w-10"><?php echo $produit['prix'];?> €</td>
+                                    <td class="tab-overflow text-center text-wrap align-middle text-secondary"><?php echo $produit['statut'];?></td>
+                                    <td class="text-center"><a href="admin.php?page=15&id=<?php echo $produit['id'];?>" class="nav-link text-dark"><i class="link-icon" data-feather="settings"></i></a></td>
+                                    <td class="text-center"><a href="admin.php?page=16&id=<?php echo $produit['id'];?>" class="nav-link text-danger"><i class="link-icon" data-feather="trash-2"></i></a></td>
                                 </tr>
                             </tbody>
                             <?php

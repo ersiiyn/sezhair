@@ -1,10 +1,9 @@
 <?php
 require '../modele/bdd.php';
+require '../modele/fonction.php';
 
 $id=htmlspecialchars($_POST['id']);
-$req = $bdd->prepare('DELETE FROM prestations WHERE id=:id');
-$req->bindValue(':id', $id, PDO::PARAM_INT);
-$req->execute();
+deleteFormule($bdd, $id);
 
 if(isset($_POST['supp_prestation'])){
     $_SESSION['message'] = '<div class="alert alert-success text-center alert-dismissible fade show" role="alert">Formule supprimé <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div></div>';

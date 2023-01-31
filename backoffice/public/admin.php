@@ -1,7 +1,7 @@
 <?php
 	require '../modele/bdd.php';
-	require "../modele/fonction.php";   //(chemin à adapter)
-	if(!isset( $_SESSION['username'])){
+	require "../modele/fonction.php";
+	if(!isset($_SESSION['admin'])){
 		header('location: ./index.php');
 	}
 ?>

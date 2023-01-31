@@ -1,5 +1,6 @@
 <?php
 require '../modele/bdd.php';
+require '../modele/fonction.php';
 
 if(isset($_POST)){
     if(isset($_POST['id']) && !empty($_POST['id'])
@@ -10,11 +11,7 @@ if(isset($_POST)){
         $formule = htmlspecialchars($_POST['formule']);
         $prix =  htmlspecialchars($_POST['prix']);
         
-        $editequeryPR = $bdd->prepare('UPDATE prestations SET formule=:formule, prix=:prix WHERE id=:id');
-        $editequeryPR->bindValue(':id', $id, PDO::PARAM_INT);
-        $editequeryPR->bindValue(':formule', $formule, PDO::PARAM_STR);
-        $editequeryPR->bindValue(':prix', $prix, PDO::PARAM_STR);
-        $editequeryPR ->execute();
+        updatePrestation($bdd, $id, $formule, $prix);
 
         // Message de modification
         $_SESSION['message'] = '<div class="alert alert-success text-center alert-dismissible fade show" role="alert">Modification réussi <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
