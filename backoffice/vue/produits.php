@@ -32,7 +32,7 @@ if(isset($_GET['souscat_produits'])){
                             <tbody>
                                 <tr>
                                     <td class="text-center"><?php echo $produit['nom'];?></td>
-                                    <th class="text-center"><img src="<?php echo '../../public/assets/img/produits/'.$produit['photo'];?>" width="40%" height="50%"></th>
+                                    <th class="text-center"><img src="<?php echo '../../public/assets/img/produits/'.$produit['photo'];?>" width="70%" height="50%"></th>
                                     <td class="tab-overflow text-center text-wrap align-middle text-secondary w-20"><?php echo $produit['descriptions'];?></td>
                                     <td class="tab-overflow text-center text-wrap align-middle text-secondary w-10"><?php echo $produit['prix'];?> €</td>
                                     <td class="tab-overflow text-center text-wrap align-middle text-secondary"><?php echo $produit['statut'];?></td>

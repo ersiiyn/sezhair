@@ -119,9 +119,6 @@
                 elseif($page==8){
                     include('../controleur/traitement-deco.php');
                 }
-                elseif($page==9){
-                    include('../vue/panier.php');
-                }
             }
             else{
                 ?>

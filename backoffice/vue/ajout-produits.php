@@ -6,7 +6,7 @@
                 <?php
                 $sousCatProduitsBoucle = recupSousCatProduitsBoucle($bdd);
                 ?>
-                <form class="forms-sample" method="POST" action="../controleur/traitement-ajout-prest.php">
+                <form class="forms-sample" method="POST" action="../controleur/traitement-ajout-produits.php">
                     <div class="form-group">
                     <label for="id">Catégorie:</label>
                         <select name="id" id="id">
@@ -53,15 +53,13 @@
             <div class="card-body">
                 <h4 class="card-title">Photo du produits</h4>
                 <form class="forms-sample" method="POST" action="../controleur/traitement-ajout-produits.php" enctype="multipart/form-data">
-                    <input type="hidden" name="id" value="<?php echo $_GET['id'];?>"/>
-                    <input type="hidden" name="souscat_produits" value="<?php echo $dataP['id'];?>"/>
                     <div class="form-group">
                         <label for="formFileLg" class="form-label">Sélectionner votre photo</label>
                         <input type="file" class="form-control" id="photo" name="photo"
-                            autocomplete="off" value="<?php echo $dataP['photo'];?>" accept="image/png, image/jpeg" enctype="multipart/form-data">
+                            autocomplete="off" accept="image/png, image/jpeg" enctype="multipart/form-data">
                     </div>
-                    <input type="submit" name="modif_photo" class="btn btn-primary" value="Modifier">
-                    <a type="button" class="btn btn-outline-secondary" href="admin.php?page=5&souscat_produits=<?php echo $dataP['id_sous_categorie'];?>">Annuler</a>
+                    <input type="submit" name="ajout_photo" class="btn btn-primary" value="Modifier">
+                    <a type="button" class="btn btn-outline-secondary" href="admin.php?page=5&souscat_produits=1">Annuler</a>
                 </form>
             </div>
         </div>
