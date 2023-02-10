@@ -71,7 +71,7 @@ if(isset($_GET['souscat_produits'])){
                                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
-                                            <img src="../public/assets/img/produits/<?php echo $produits['photo'];?>" class="d-block w-100" alt="...">
+                                            <img src="../public/assets/img/produits/<?php echo $produits['photo'];?>" class="d-block w-100" alt="Produits">
                                             </div>
                                         </div>
                                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

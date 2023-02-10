@@ -20,7 +20,7 @@
                         ?>
                         <tbody>
                             <tr>
-                                <th class="py-5"><img src="<?php echo '../../public/assets/img/coupe/'.$medias['photo'];?>" alt="image" width="65%"></th>
+                                <th class="py-5"><img src="<?php echo '../../public/assets/img/coupe/'.$medias['photo'];?>" alt="Photo" width="55%"></th>
                                 <td class="text-center"><a href="admin.php?page=9&id=<?php echo $medias['id'];?>" class="nav-link text-danger"><i class="link-icon" data-feather="trash-2"></i></a></td>
                             </tr>
                         </tbody>

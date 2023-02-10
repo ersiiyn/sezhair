@@ -13,7 +13,7 @@
                 Êtes-vous sûr de bien vouloir supprimer:
             </p>
             <p class="lead mb-4 mt-1 text-danger"><?php echo $data['nom'].' ?';?></p>
-            <img class="mb-5" src="<?php echo '../../public/assets/img/produits/'.$data['photo'];?>" alt="image" width="50%">
+            <img class="mb-5" src="<?php echo '../../public/assets/img/produits/'.$data['photo'];?>" alt="photo produit" width="50%">
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <input type="hidden" name="id" value="<?php echo $_GET['id'];?>"/> 
                 <input type="hidden" name="idcat" value="<?php echo $data['id_sous_categorie'];?>"/> 

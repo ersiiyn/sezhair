@@ -22,7 +22,7 @@
                             <tr>
                                 <td class="text-center tab-overflow text-wrap align-middle text-secondary"><?php echo $dataPrs['nom'];?></td>
                                 <td class="tab-overflow text-center text-wrap align-middle text-secondary"><?php echo $dataPrs['descriptions'];?></td>
-                                <th class="text-center"><img src="<?php echo '../../public/assets/img/accueil/'.$dataPrs['photo'];?>" width="30%" height="50%"></th>
+                                <th class="text-center"><img src="<?php echo '../../public/assets/img/accueil/'.$dataPrs['photo'];?>" width="30%" height="50%" alt="Photo"></th>
                                 <td class="text-center"><a href="admin.php?page=6&id=<?php echo $dataPrs['id'];?>" class="nav-link text-dark"><i class="link-icon" data-feather="settings"></i></a></td>
                             </tr>
                         </tbody>

@@ -50,6 +50,6 @@
     </div> 
     <!-- Image -->
     <div class="image-connexion">
-        <img class="razor" src="../public/assets/img/connexion/razor.png">
+        <img class="razor" src="../public/assets/img/connexion/razor.png" alt="Image de rasoir">
     </div>
 </div>

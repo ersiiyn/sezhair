@@ -47,7 +47,7 @@ else{
             ?>
         </div>
     </div>
-    <div class="box-image-formule"><img class="image-formule" src="../public/assets/<?php echo $dataSC['image'];?>"></div>
+    <div class="box-image-formule"><img class="image-formule" src="../public/assets/<?php echo $dataSC['image'];?>" alt="Image formule"></div>
 </div>
 <!-- Fin boule while pour les sous categories -->
 <?php

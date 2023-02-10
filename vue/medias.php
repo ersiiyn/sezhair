@@ -5,7 +5,7 @@
     $dataC = recupImageSezhair($bdd, $id);
 ?>
 <div class="box-image">
-    <img class="image-menu" src="<?php echo '../public/assets/img/'.$dataC['image_categorie'];?>">
+    <img class="image-menu" src="<?php echo '../public/assets/img/'.$dataC['image_categorie'];?>" alt="Image de médias">
 </div>
 <!-- ...........................................  PHOTO .................................................. -->
 <div class="box-photo">
@@ -14,7 +14,7 @@
         $dataM = recupPhotoMedias($bdd);
         foreach($dataM as $medias){
     ?>
-    <div class="photo"><img class="coupe" src="<?php echo '../public/assets/img/coupe/'.$medias['photo'];?>"></div>
+    <div class="photo"><img class="coupe" src="<?php echo '../public/assets/img/coupe/'.$medias['photo'];?>" alt="Photo"></div>
     <?php
         }
     ?>

@@ -22,21 +22,21 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active carousel">
-            <img src="../public/assets/img/accueil/barbe.jpg" class="d-block w-100 img-fluid" alt="...">
+            <img src="../public/assets/img/accueil/barbe.jpg" class="d-block w-100 img-fluid" alt="Nos prestation">
             <div class="carousel-caption d-none d-md-block">
                 <h1>NOS PRESTATIONS</h1>
                 <a class="fs-5" href="index.php?page=2">En savoir plus</a>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="../public/assets/img/accueil/produits2.jpg" class="d-block w-100 img-fluid" alt="...">
+            <img src="../public/assets/img/accueil/produits2.jpg" class="d-block w-100 img-fluid" alt="Medias">
             <div class="carousel-caption d-none d-md-block carousel">
                 <h1>NOS PRODUITS</h1>
                     <a class="fs-5" href="index.php?page=3&souscat_produits=1">En savoir plus</a>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="../public/assets/img/accueil/lunette.jpg" class="d-block w-100 img-fluid" alt="...">
+            <img src="../public/assets/img/accueil/lunette.jpg" class="d-block w-100 img-fluid" alt="Nos produits">
             <div class="carousel-caption d-none d-md-block carousel">
                 <h1>MEDIAS</h1>
                     <a class="fs-5" href="index.php?page=4">En savoir plus</a>
@@ -74,17 +74,17 @@
     </div>
     <div class="box-logo-services">
         <div class="box-element1">
-            <div class="logo-services"><img class="image-logo" src="../public/assets/<?php echo $dataEL[1][0]['contenu'];?>"></div>
+            <div class="logo-services"><img class="image-logo" src="../public/assets/<?php echo $dataEL[1][0]['contenu'];?>" alt="Couper & Tailler"></div>
             <div class="titre-services"><span class="texte-titre-services"><?php echo $dataEL[1][1]['contenu'];?></span></div>
             <div class="texte-services"><span class="texte-texte-services"><?php echo $dataEL[1][2]['contenu'];?></span></div>
         </div>
         <div class="box-element1">
-            <div class="logo-services"><img class="image-logo" src="../public/assets/<?php echo $dataEL[2][0]['contenu'];?>"></div>
+            <div class="logo-services"><img class="image-logo" src="../public/assets/<?php echo $dataEL[2][0]['contenu'];?>" alt="Lavage & Séchage"></div>
             <div class="titre-services"><span class="texte-titre-services"><?php echo $dataEL[2][1]['contenu'];?></span></div>
             <div class="texte-services"><span class="texte-texte-services"><?php echo $dataEL[2][2]['contenu'];?></span></div>
         </div>
         <div class="box-element1">
-            <div class="logo-services"><img class="image-logo" src="../public/assets/<?php echo $dataEL[3][0]['contenu'];?>"></div>
+            <div class="logo-services"><img class="image-logo" src="../public/assets/<?php echo $dataEL[3][0]['contenu'];?>" alt="Barbe Soignée"></div>
             <div class="titre-services"><span class="texte-titre-services"><?php echo $dataEL[3][1]['contenu'];?></span></div>
             <div class="texte-services"><span class="texte-texte-services"><?php echo $dataEL[3][2]['contenu'];?></span></div>
         </div>
@@ -92,7 +92,7 @@
 </div>
 <!-- ...........................................  Sezhair .................................................. -->
 <div class="box-sezhair">
-    <div class="box-image-sezhair"><img class="image-sezhair" src="../public/assets/<?php echo $dataEL[4][0]['contenu'];?>"></div>
+    <div class="box-image-sezhair"><img class="image-sezhair" src="../public/assets/<?php echo $dataEL[4][0]['contenu'];?>" alt="Salon sezhair"></div>
     <div class="box-ecriture-sezhair">
         <div class="box-titre-sezhair"><span class="titre-sezhair"><?php echo mb_strtoupper( $dataEL[4][1]['contenu']);?></span></div><br>
         <div class="box-texte-sezhair">
@@ -120,7 +120,7 @@
             foreach($data as $equipe){
         ?>
         <div class="petite-box-presentation">
-            <div class="box-image-presentation"><img class="image-presentation" src="<?php echo '../public/assets/img/accueil/'.$equipe['photo'];?>"></div>
+            <div class="box-image-presentation"><img class="image-presentation" src="<?php echo '../public/assets/img/accueil/'.$equipe['photo'];?>" alt="image de présentation"></div>
             <div class="box-nom-presentation"><span class="nom-presentation"><?php echo $equipe['nom'];?></span></div>
             <div class="box-texte-presentation"><span class="texte-presentation"><?php echo $equipe['descriptions'];?><br></span></div>
         </div>
@@ -143,7 +143,7 @@
             </div>
         </div>
     </div>
-    <div class="box-image-produits"><img class="image-produits" src="../public/assets/<?php echo $dataEL[6][1]['contenu'];?>"></div>
+    <div class="box-image-produits"><img class="image-produits" src="../public/assets/<?php echo $dataEL[6][1]['contenu'];?>" alt="Produits Bros"></div>
 </div>
 <?php
     }

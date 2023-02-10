@@ -9,7 +9,7 @@
             <p class="lead mb-4">Attention si vous supprimer votre élément, il n'apparaîtra plus dans votre liste.
                 Êtes-vous sûr de bien vouloir supprimer ?
             </p>
-            <img class="mb-5" src="<?php echo '../../public/assets/img/coupe/'.$dataIdMed['photo'];?>" alt="image" width="50%">
+            <img class="mb-5" src="<?php echo '../../public/assets/img/coupe/'.$dataIdMed['photo'];?>" alt="photo" width="50%">
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <input type="hidden" name="id" value="<?php echo $_GET['id'];?>"/> 
                 <input class="btn btn-danger btn-lg" type="submit" value="Supprimer" name="supp_med">

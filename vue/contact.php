@@ -13,7 +13,7 @@
     $dataC = recupImageSezhair($bdd,$id);
 ?>
 <div class="box-image">
-    <img src="<?php echo '../public/assets/img/contact/'.htmlspecialchars($dataC['image_categorie']);?>" width="100%" height="100%">
+    <img src="<?php echo '../public/assets/img/contact/'.htmlspecialchars($dataC['image_categorie']);?>" alt="Image de contact" width="100%" height="100%">
 </div>
 <!-- ...........................................  ADRESSE HORAIRE .................................................. -->
 <?php
@@ -30,7 +30,7 @@
 </div>
 <!-- ...........................................  MAPS .................................................. -->
 <div class="box-maps">
-    <div class="box-image-maps"><img class="brush" src="../public/assets/img/contact/brush.jpg"></div>
+    <div class="box-image-maps"><img class="brush" src="../public/assets/img/contact/brush.jpg" alt="Image blaireau rasage"></div>
     <div class="maps"><iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10394.209406836357!2d6.0501714!3d49.3606207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf047e74f71d27798!2sSezhair%20Coiffure%20-%20Coiffeur%2C%20Barbier%20%C3%A0%20Algrange!5e0!3m2!1sfr!2sfr!4v1666083078244!5m2!1sfr!2sfr"
             width="100%" height="85%" style="border:0;" allowfullscreen="" loading="lazy"
